@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-26T16:11:13.829+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-26T16:09:35.840+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-26T16:08:08.846+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-26T16:06:22.239+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-26T15:25:14.246+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-26T15:25:07.742+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-26T15:17:44.332+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-26T15:15:53.611+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-24T19:38:33.107+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-23T18:25:32.404+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-23T18:24:57.829+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-23T18:22:09.225+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-23T18:22:01.470+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-23T18:21:15.621+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-23T18:03:11.627+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-23T14:59:59.528+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-23T14:52:55.201+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-23T14:51:26.047+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T18:02:13.165+0900"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T18:02:13.162+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:45:15.965+0900"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:45:15.958+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:42:06.709+0900"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:42:06.704+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:40:01.325+0900"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:40:01.319+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:39:31.058+0900"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:39:31.049+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:38:52.918+0900"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:38:52.908+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:23:36.472+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:16:30.652+0900"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:16:30.648+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:14:35.939+0900"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:14:35.936+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:11:37.534+0900"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:11:37.531+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:09:26.552+0900"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:09:26.549+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:08:24.776+0900"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:08:24.772+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:06:44.070+0900"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:06:44.066+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:04:56.316+0900"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:04:56.313+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:01:20.606+0900"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:01:20.603+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:00:28.183+0900"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T17:00:28.180+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T16:59:46.779+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="py_torch_bnn" solutionName="solution1" date="2018-10-18T16:58:56.816+0900"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

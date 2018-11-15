@@ -1,0 +1,10 @@
+extern int in[784][10000];
+extern int tag[10000];
+extern int result[100];
+extern int af_weight[4][4096][4096];
+extern double af_last_weight[4096][10];
+extern double af_last_bias[10];
+extern double bn_weight[4][4096];
+extern double bn_bias[4][4096];
+extern int dot[4][4096][100];
+extern double f_dot[5][4096][100];

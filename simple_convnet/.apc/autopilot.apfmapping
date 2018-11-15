@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="define.h" path="/home/yagiyugo/vivado/define.h"/>
+    <originFiles name="define.h" path="/home/yagiyugo/vivado/simple_convnet/source/define.h"/>
+    <originFiles name="extern.h" path="/home/yagiyugo/vivado/simple_convnet/source/extern.h"/>
+    <originFiles name="init.cpp" path="/home/yagiyugo/vivado/simple_convnet/source/init.cpp"/>
+    <originFiles name="func.cpp" path="/home/yagiyugo/vivado/simple_convnet/source/func.cpp"/>
+    <originFiles name="simple_convnet.cpp" path="/home/yagiyugo/vivado/simple_convnet/source/simple_convnet.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="simple_convnet_tb.cpp" path="/home/yagiyugo/vivado/simple_convnet/source/simple_convnet_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

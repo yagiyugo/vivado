@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="define.h" path="/home/yagiyugo/vivado/py_torch_bnn/define.h"/>
+    <originFiles name="extern.h" path="/home/yagiyugo/vivado/py_torch_bnn/extern.h"/>
+    <originFiles name="func.cpp" path="/home/yagiyugo/vivado/py_torch_bnn/func.cpp"/>
+    <originFiles name="init.cpp" path="/home/yagiyugo/vivado/py_torch_bnn/init.cpp"/>
+    <originFiles name="mnist_nn.cpp" path="/home/yagiyugo/vivado/py_torch_bnn/mnist_nn.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="mnist_nn_tb.cpp" path="/home/yagiyugo/vivado/py_torch_bnn/mnist_nn_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

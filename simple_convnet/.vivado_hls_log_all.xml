@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="simple_convNet" solutionName="solution1" date="2018-11-14T17:16:28.738+0900"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="simple_convNet" solutionName="solution1" date="2018-11-14T17:16:28.734+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="simple_convNet" solutionName="solution1" date="2018-11-14T17:14:41.408+0900"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="simple_convNet" solutionName="solution1" date="2018-11-14T17:14:41.404+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="Simple_convNet" solutionName="solution1" date="2018-11-14T17:11:13.216+0900"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="Simple_convNet" solutionName="solution1" date="2018-11-14T17:11:13.214+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Simple_convNet" solutionName="solution1" date="2018-11-14T17:10:27.849+0900"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
