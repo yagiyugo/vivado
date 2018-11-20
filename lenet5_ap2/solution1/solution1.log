@@ -7,7 +7,65 @@ Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-INFO: [SIM 211-1] CSim done with 0 errors.
-INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-10] Analyzing design file 'lenet5_ap2/source/lenet5_ap2.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'lenet5_ap2/source/init.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'lenet5_ap2/source/func.cpp' ... 
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:19 ; elapsed = 00:00:54 . Memory (MB): peak = 356.051 ; gain = 12.586 ; free physical = 11212 ; free virtual = 56481
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:24 ; elapsed = 00:00:59 . Memory (MB): peak = 356.051 ; gain = 12.586 ; free physical = 11090 ; free virtual = 56478
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:37 ; elapsed = 00:01:13 . Memory (MB): peak = 1060.055 ; gain = 716.590 ; free physical = 10386 ; free virtual = 55944
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-62] lenet5_ap2/source/lenet5_ap2.cpp:130: warning: out of bound array access on variable 'fc_dot'.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:39 ; elapsed = 00:01:15 . Memory (MB): peak = 1113.176 ; gain = 769.711 ; free physical = 10254 ; free virtual = 55836
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1.1.1.1.1.1' (lenet5_ap2/source/lenet5_ap2.cpp:22) in function 'lenet5_ap2' automatically.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1.1.1.1' (lenet5_ap2/source/lenet5_ap2.cpp:22) in function 'lenet5_ap2' completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet5_ap2/source/lenet5_ap2.cpp:134:3) to (lenet5_ap2/source/lenet5_ap2.cpp:129:21) in function 'lenet5_ap2'... converting 5 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'lenet5_ap2' (lenet5_ap2/source/lenet5_ap2.cpp:10)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:42 ; elapsed = 00:01:18 . Memory (MB): peak = 1508.051 ; gain = 1164.586 ; free physical = 9734 ; free virtual = 55480
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:43 ; elapsed = 00:01:19 . Memory (MB): peak = 1519.930 ; gain = 1176.465 ; free physical = 9669 ; free virtual = 55416
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lenet5_ap2' ...
+WARNING: [SYN 201-107] Renaming port name 'lenet5_ap2/in' to 'lenet5_ap2/in_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'lenet5_ap2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 79.35 seconds; current allocated memory: 1.041 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 1.044 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet5_ap2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/index' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/conv_bias' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/in_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/conv_weight' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/conv_dot' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/pool_dot' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/fc_in' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/fc_weight' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/fc_bias' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/fc_dot' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lenet5_ap2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'lenet5_ap2_dadd_64ns_64ns_64_5_full_dsp' to 'lenet5_ap2_dadd_6bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet5_ap2_dmul_64ns_64ns_64_6_max_dsp' to 'lenet5_ap2_dmul_6cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet5_ap2_dcmp_64ns_64ns_1_1' to 'lenet5_ap2_dcmp_6dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet5_ap2_mac_muladd_15ns_10ns_25ns_25_1' to 'lenet5_ap2_mac_mueOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenet5_ap2_dadd_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet5_ap2_dcmp_6dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet5_ap2_dmul_6cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet5_ap2_mac_mueOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet5_ap2'.
+INFO: [HLS 200-111]  Elapsed time: 0.43 seconds; current allocated memory: 1.048 GB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:45 ; elapsed = 00:01:21 . Memory (MB): peak = 1519.930 ; gain = 1176.465 ; free physical = 9661 ; free virtual = 55417
+INFO: [SYSC 207-301] Generating SystemC RTL for lenet5_ap2.
+INFO: [VHDL 208-304] Generating VHDL RTL for lenet5_ap2.
+INFO: [VLOG 209-307] Generating Verilog RTL for lenet5_ap2.
+INFO: [HLS 200-112] Total elapsed time: 81.51 seconds; peak allocated memory: 1.048 GB.

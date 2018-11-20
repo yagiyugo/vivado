@@ -18,7 +18,7 @@ void load_test_data(){
 		sprintf(fname, "%s%s%d%s", data_dir, "data", i, ".txt");
 		if ((fp = fopen(fname, "r")) == NULL) {
 			fprintf(stderr, "%s is not open.\n", fname);
-		    exit(1);
+		    _exit(1);
 		}
 		for(int j=0; j<2000; j++){
 			for(int k=0; k<32; k++){
@@ -37,7 +37,7 @@ void load_test_data(){
 		sprintf(fname, "%s%s%d%s", data_dir, "tag", i, ".txt");
 		if ((fp = fopen(fname, "r")) == NULL) {
 			fprintf(stderr, "%s is not open.\n", fname);
-			exit(1);
+			_exit(1);
 		}
 		for(int j=0; j<2000; j++){
 			fscanf(fp,"%lf", &f_in);
@@ -51,7 +51,7 @@ void load_fc_weight(int num, int row, int column){
 	sprintf(fname, "%s%s%s%d%s", param_dir, fix, "fc", num, "_weight.txt");
 	if ((fp = fopen(fname, "r")) == NULL) {
 		fprintf(stderr, "%s is not open.\n", fname);
-	    exit(1);
+	    _exit(1);
 	}
 	for(int i=0; i<row; i++){
 		for(int j=0; j<column; j++){
@@ -66,7 +66,7 @@ void load_conv_weight(int lay_num, int channel, int sample, int row, int column)
 	sprintf(fname, "%s%s%s%d%s", param_dir, fix, "conv", lay_num, "_weight.txt");
 	if ((fp = fopen(fname, "r")) == NULL) {
 		fprintf(stderr, "%s is not open.\n", fname);
-	    exit(1);
+	    _exit(1);
 	}
 	for(int i=0; i<channel; i++){
 		for(int j=0; j<sample; j++){
@@ -85,7 +85,7 @@ void load_fc_bias(int lay_num, int row){
 	sprintf(fname, "%s%s%s%d%s", param_dir, fix, "fc", lay_num, "_bias.txt");
 	if ((fp = fopen(fname, "r")) == NULL) {
 		fprintf(stderr, "%s is not open.\n", fname);
-	    exit(1);
+	    _exit(1);
 	}
 	for(int i=0; i<row; i++){
 		fscanf(fp, "%lf", &f_in);
@@ -98,7 +98,7 @@ void load_conv_bias(int lay_num, int row){
 	sprintf(fname, "%s%s%s%d%s", param_dir, fix, "conv", lay_num, "_bias.txt");
 	if ((fp = fopen(fname, "r")) == NULL) {
 		fprintf(stderr, "%s is not open.\n", fname);
-	    exit(1);
+	    _exit(1);
 	}
 	for(int i=0; i<row; i++){
 		fscanf(fp, "%lf", &f_in);

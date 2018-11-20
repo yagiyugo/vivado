@@ -7,7 +7,92 @@ Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-INFO: [SIM 211-1] CSim done with 0 errors.
-INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-10] Analyzing design file 'lenet5_ap2_shift/source/lenet5_ap2.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'lenet5_ap2_shift/source/init.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'lenet5_ap2_shift/source/func.cpp' ... 
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:19 ; elapsed = 00:00:54 . Memory (MB): peak = 356.051 ; gain = 12.586 ; free physical = 9455 ; free virtual = 54563
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:24 ; elapsed = 00:00:59 . Memory (MB): peak = 356.051 ; gain = 12.586 ; free physical = 9330 ; free virtual = 54558
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<30, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:156).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<30, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:153).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<30, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:138).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<30, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:135).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<30, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:120).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<30, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:117).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<30, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:71).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<30, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:68).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<30, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:27).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<30, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:24).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<30, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_double' into 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:164).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<30, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_double' into 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:161).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<30, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_double' into 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:93).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<30, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_double' into 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:92).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<30, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_double' into 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:89).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<30, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_double' into 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:49).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<30, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_double' into 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:48).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<30, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_double' into 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:45).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<30, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_double' into 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:165).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:37 ; elapsed = 00:01:13 . Memory (MB): peak = 1060.055 ; gain = 716.590 ; free physical = 8530 ; free virtual = 53933
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-62] lenet5_ap2_shift/source/lenet5_ap2.cpp:150: warning: out of bound array access on variable 'fc_dot.V'.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:39 ; elapsed = 00:01:16 . Memory (MB): peak = 1168.809 ; gain = 825.344 ; free physical = 8435 ; free virtual = 53863
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1.1.1.1.1.1' (lenet5_ap2_shift/source/lenet5_ap2.cpp:22) in function 'lenet5_ap2' automatically.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1.1.1.1' (lenet5_ap2_shift/source/lenet5_ap2.cpp:22) in function 'lenet5_ap2' completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet5_ap2_shift/source/lenet5_ap2.cpp:23:8) to (lenet5_ap2_shift/source/lenet5_ap2.cpp:21:36) in function 'lenet5_ap2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet5_ap2_shift/source/lenet5_ap2.cpp:48:10) to (lenet5_ap2_shift/source/lenet5_ap2.cpp:47:36) in function 'lenet5_ap2'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet5_ap2_shift/source/lenet5_ap2.cpp:45:17) to (lenet5_ap2_shift/source/lenet5_ap2.cpp:46:22) in function 'lenet5_ap2'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet5_ap2_shift/source/lenet5_ap2.cpp:53:5) to (lenet5_ap2_shift/source/lenet5_ap2.cpp:44:27) in function 'lenet5_ap2'... converting 10 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet5_ap2_shift/source/lenet5_ap2.cpp:67:8) to (lenet5_ap2_shift/source/lenet5_ap2.cpp:66:25) in function 'lenet5_ap2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet5_ap2_shift/source/lenet5_ap2.cpp:92:10) to (lenet5_ap2_shift/source/lenet5_ap2.cpp:91:24) in function 'lenet5_ap2'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet5_ap2_shift/source/lenet5_ap2.cpp:89:17) to (lenet5_ap2_shift/source/lenet5_ap2.cpp:90:16) in function 'lenet5_ap2'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet5_ap2_shift/source/lenet5_ap2.cpp:97:5) to (lenet5_ap2_shift/source/lenet5_ap2.cpp:88:22) in function 'lenet5_ap2'... converting 10 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet5_ap2_shift/source/lenet5_ap2.cpp:116:4) to (lenet5_ap2_shift/source/lenet5_ap2.cpp:115:27) in function 'lenet5_ap2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet5_ap2_shift/source/lenet5_ap2.cpp:134:4) to (lenet5_ap2_shift/source/lenet5_ap2.cpp:133:23) in function 'lenet5_ap2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet5_ap2_shift/source/lenet5_ap2.cpp:152:4) to (lenet5_ap2_shift/source/lenet5_ap2.cpp:151:22) in function 'lenet5_ap2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet5_ap2_shift/source/lenet5_ap2.cpp:159:3) to (lenet5_ap2_shift/source/lenet5_ap2.cpp:149:21) in function 'lenet5_ap2'... converting 8 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'lenet5_ap2' (lenet5_ap2_shift/source/lenet5_ap2.cpp:10)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:42 ; elapsed = 00:01:19 . Memory (MB): peak = 1572.051 ; gain = 1228.586 ; free physical = 7910 ; free virtual = 53510
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:43 ; elapsed = 00:01:20 . Memory (MB): peak = 1584.730 ; gain = 1241.266 ; free physical = 7834 ; free virtual = 53435
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lenet5_ap2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'lenet5_ap2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 80.39 seconds; current allocated memory: 1.073 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.44 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet5_ap2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/index' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/conv_bias_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/conv_dot_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/conv_weight' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/in_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/pool_dot_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/fc_in_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/fc_dot_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/fc_weight' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet5_ap2/fc_bias_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lenet5_ap2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'lenet5_ap2_dcmp_64ns_64ns_1_1' to 'lenet5_ap2_dcmp_6bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet5_ap2_sitodp_32s_64_6' to 'lenet5_ap2_sitodpcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet5_ap2_mac_muladd_15ns_10ns_25ns_25_1' to 'lenet5_ap2_mac_mudEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenet5_ap2_dcmp_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet5_ap2_mac_mudEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet5_ap2_sitodpcud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet5_ap2'.
+INFO: [HLS 200-111]  Elapsed time: 0.64 seconds; current allocated memory: 1.081 GB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:46 ; elapsed = 00:01:24 . Memory (MB): peak = 1584.730 ; gain = 1241.266 ; free physical = 7812 ; free virtual = 53428
+INFO: [SYSC 207-301] Generating SystemC RTL for lenet5_ap2.
+INFO: [VHDL 208-304] Generating VHDL RTL for lenet5_ap2.
+INFO: [VLOG 209-307] Generating Verilog RTL for lenet5_ap2.
+INFO: [HLS 200-112] Total elapsed time: 83.63 seconds; peak allocated memory: 1.081 GB.

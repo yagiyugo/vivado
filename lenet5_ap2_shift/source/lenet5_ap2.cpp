@@ -20,7 +20,12 @@ int lenet5_ap2(int index){
 				for(int fil_col=0; fil_col<5; fil_col++){
 					for(int fil_row=0; fil_row<5; fil_row++){
 						for(int sample=0; sample<1; sample++){
-							conv_dot[1][channel][col][row] += in[col+fil_col][row+fil_row][index] * conv_weight[1][channel][sample][fil_row][fil_col];
+							if(conv_weight[1][channel][sample][fil_row][fil_col][0] == 0){
+								conv_dot[1][channel][col][row] += in[col+fil_col][row+fil_row][index] << conv_weight[1][channel][sample][fil_row][fil_col][1];
+							}
+							else{
+								conv_dot[1][channel][col][row] -= in[col+fil_col][row+fil_row][index] << conv_weight[1][channel][sample][fil_row][fil_col][1];
+							}
 						}
 					}
 				}
@@ -59,7 +64,12 @@ int lenet5_ap2(int index){
 				for(int fil_col=0; fil_col<5; fil_col++){
 					for(int fil_row=0; fil_row<5; fil_row++){
 						for(int n=0; n<6; n++){
-							conv_dot[2][i][col][row] += pool_dot[1][n][col+fil_col][row+fil_row] * conv_weight[2][i][n][fil_row][fil_col];
+							if(conv_weight[2][i][n][fil_row][fil_col][0] == 0){
+								conv_dot[2][i][col][row] += pool_dot[1][n][col+fil_col][row+fil_row] << conv_weight[2][i][n][fil_row][fil_col][1];
+							}
+							else{
+								conv_dot[2][i][col][row] -= pool_dot[1][n][col+fil_col][row+fil_row] << conv_weight[2][i][n][fil_row][fil_col][1];
+							}
 						}
 					}
 				}
@@ -103,7 +113,12 @@ int lenet5_ap2(int index){
 	for(int col=0; col<120; col++){
 		fc_dot[1][col] = 0;
 		for(int row=0; row<400; row++){
-			fc_dot[1][col] += fc_in[row] * fc_weight[1][row][col];
+			if(fc_weight[1][row][col][0] == 0){
+				fc_dot[1][col] += fc_in[row] << fc_weight[1][row][col][1];
+			}
+			else{
+				fc_dot[1][col] -= fc_in[row] << fc_weight[1][row][col][1];
+			}
 		}
 		fc_dot[1][col] += fc_bias[1][col];
 		//relu
@@ -116,7 +131,12 @@ int lenet5_ap2(int index){
 	for(int i=0; i<84; i++){
 		fc_dot[2][i] = 0;
 		for(int j=0; j<120; j++){
-			fc_dot[2][i] += fc_dot[1][j] * fc_weight[2][j][i];
+			if(fc_weight[2][j][i][0] == 0){
+				fc_dot[2][i] += fc_dot[1][j] << fc_weight[2][j][i][1];
+			}
+			else{
+				fc_dot[2][i] -= fc_dot[1][j] << fc_weight[2][j][i][1];
+			}
 		}
 		fc_dot[2][i] += fc_bias[2][i];
 		//relu
@@ -129,7 +149,12 @@ int lenet5_ap2(int index){
 	for(int i=0; i<10; i++){
 		fc_dot[3][i] = 0;
 		for(int j=0; j<84; j++){
-			fc_dot[3][i] += fc_dot[2][j] * fc_weight[3][j][i];
+			if(fc_weight[3][j][i][0] == 0){
+				fc_dot[3][i] += fc_dot[2][j] << fc_weight[3][j][i][1];
+			}
+			else{
+				fc_dot[3][i] -= fc_dot[2][j] << fc_weight[3][j][i][1];
+			}
 		}
 		fc_dot[3][i] += fc_bias[3][i];
 		if(i == 0){
@@ -140,7 +165,7 @@ int lenet5_ap2(int index){
 			max_value = fc_dot[3][i];
 			max_index = i;
 		}
-		//printf("%d: %lf\n", i, fc_dot[3][i]);
+		//printf("%d: %lf\n", i, float(fc_dot[3][i]));
 	}
 	return max_index;
 

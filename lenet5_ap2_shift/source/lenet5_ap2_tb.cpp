@@ -7,17 +7,18 @@
 #include <time.h>
 #include "define.h"
 
-double in[32][32][10000];
+ap_fixed<30,10> in[32][32][10000];
 int tag[10000];
 int result;
-double fc_weight[4][400][400];  //[層][縦][横]
-double fc_bias[4][120];
-double conv_weight[3][16][6][5][5];  //[層][チャネル][サンプル][縦][横]
-double conv_bias[3][16];
-double fc_dot[3][120];
-double conv_dot[3][16][28][28]; //[層][チャネル][サンプル][縦][横]
-double pool_dot[3][16][14][14]; //[層][チャネル][サンプル][縦][横]
-double fc_in[400];
+int fc_weight[4][400][400][2];  //[層][縦][横][データの種類]
+ap_fixed<30,10> fc_bias[4][120];
+int conv_weight[3][16][6][5][5][2];  //[層][チャネル][サンプル][縦][横][データの種類]
+ap_fixed<30,10> conv_bias[3][16];
+ap_fixed<30,10> fc_dot[3][120];
+ap_fixed<30,10> conv_dot[3][16][28][28]; //[層][チャネル][サンプル][縦][横]
+ap_fixed<30,10> pool_dot[3][16][14][14]; //[層][チャネル][サンプル][縦][横]
+ap_fixed<30,10> fc_in[400];
+
 
 int lenet5_ap2(int index);
 
@@ -44,10 +45,10 @@ int main(){
 	int hw_err_count = 0;
 
 	clock_gettime(CLOCK_REALTIME, &nn_start);
-    for(int i=0; i<NUM_ITERATIONS/NUM_ITERATION_PER_EPOCH; i++){
-    	printf("----------Epoch%d----------\n", i+1);
-    	for(int j=0; j<NUM_ITERATION_PER_EPOCH; j++){
-    		result = lenet5_ap2(j+i*NUM_ITERATION_PER_EPOCH);
+	for(int i=0; i<NUM_ITERATIONS/NUM_ITERATION_PER_EPOCH; i++){
+		printf("----------Epoch%d----------\n", i+1);
+		for(int j=0; j<NUM_ITERATION_PER_EPOCH; j++){
+			result = lenet5_ap2(j+i*NUM_ITERATION_PER_EPOCH);
     		//printf("%3d result:%d, answer:%d\n", j, result, tag[j+i*NUM_ITERATION_PER_EPOCH]);
     		if(result != tag[j+i*NUM_ITERATION_PER_EPOCH]){
     			hw_err_count++;

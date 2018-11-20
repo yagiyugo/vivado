@@ -29,62 +29,62 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/home/yagiyugo/vivado/lenet5_ap2/.apc/.src</location>
+			<location>/home/yagiyugo/vivado/lenet5_ap2_shift/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/home/yagiyugo/vivado/lenet5_ap2/.apc/.tb</location>
+			<location>/home/yagiyugo/vivado/lenet5_ap2_shift/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>/home/yagiyugo/vivado/lenet5_ap2/solution1/.tcls</location>
+			<location>/home/yagiyugo/vivado/lenet5_ap2_shift/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/define.h</name>
 			<type>1</type>
-			<location>/home/yagiyugo/vivado/lenet5_ap2/source/define.h</location>
+			<location>/home/yagiyugo/vivado/lenet5_ap2_shift/source/define.h</location>
 		</link>
 		<link>
 			<name>source/extern.h</name>
 			<type>1</type>
-			<location>/home/yagiyugo/vivado/lenet5_ap2/source/extern.h</location>
+			<location>/home/yagiyugo/vivado/lenet5_ap2_shift/source/extern.h</location>
 		</link>
 		<link>
 			<name>source/func.cpp</name>
 			<type>1</type>
-			<location>/home/yagiyugo/vivado/lenet5_ap2/source/func.cpp</location>
+			<location>/home/yagiyugo/vivado/lenet5_ap2_shift/source/func.cpp</location>
 		</link>
 		<link>
 			<name>source/init.cpp</name>
 			<type>1</type>
-			<location>/home/yagiyugo/vivado/lenet5_ap2/source/init.cpp</location>
+			<location>/home/yagiyugo/vivado/lenet5_ap2_shift/source/init.cpp</location>
 		</link>
 		<link>
 			<name>source/lenet5_ap2.cpp</name>
 			<type>1</type>
-			<location>/home/yagiyugo/vivado/lenet5_ap2/source/lenet5_ap2.cpp</location>
+			<location>/home/yagiyugo/vivado/lenet5_ap2_shift/source/lenet5_ap2.cpp</location>
 		</link>
 		<link>
 			<name>testbench/lenet5_ap2_tb.cpp</name>
 			<type>1</type>
-			<location>/home/yagiyugo/vivado/lenet5_ap2/source/lenet5_ap2_tb.cpp</location>
+			<location>/home/yagiyugo/vivado/lenet5_ap2_shift/source/lenet5_ap2_tb.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/yagiyugo/vivado/lenet5_ap2/solution1/solution1.directive</location>
+			<location>/home/yagiyugo/vivado/lenet5_ap2_shift/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/yagiyugo/vivado/lenet5_ap2/solution1/directives.tcl</location>
+			<location>/home/yagiyugo/vivado/lenet5_ap2_shift/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/yagiyugo/vivado/lenet5_ap2/solution1/script.tcl</location>
+			<location>/home/yagiyugo/vivado/lenet5_ap2_shift/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

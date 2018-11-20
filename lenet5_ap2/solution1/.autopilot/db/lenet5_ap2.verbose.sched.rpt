@@ -1,0 +1,3749 @@
+
+
+================================================================
+== Vivado HLS Report for 'lenet5_ap2'
+================================================================
+* Date:           Thu Nov 15 16:05:12 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        lenet5_ap2
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.71|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +---------+---------+---------+---------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min   |   max   |   min   |   max   |   Type  |
+    +---------+---------+---------+---------+---------+
+    |  6540444|  6540444|  6540445|  6540445|   none  |
+    +---------+---------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                             |      Latency      | Iteration|  Initiation Interval  | Trip |          |
+        |          Loop Name          |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1                     |  1966626|  1966626|    327771|          -|          -|     6|    no    |
+        | + Loop 1.1                  |   327768|   327768|     11706|          -|          -|    28|    no    |
+        |  ++ Loop 1.1.1              |    11704|    11704|       418|          -|          -|    28|    no    |
+        |   +++ Loop 1.1.1.1          |      410|      410|        82|          -|          -|     5|    no    |
+        |    ++++ Loop 1.1.1.1.1      |       80|       80|        16|          -|          -|     5|    no    |
+        |- Loop 2                     |    27228|    27228|      4538|          -|          -|     6|    no    |
+        | + Loop 2.1                  |     4536|     4536|       324|          -|          -|    14|    no    |
+        |  ++ Loop 2.1.1              |      322|      322|        23|          -|          -|    14|    no    |
+        |   +++ Loop 2.1.1.1          |       20|       20|        10|          -|          -|     2|    no    |
+        |    ++++ Loop 2.1.1.1.1      |        8|        8|         4|          -|          -|     2|    no    |
+        |- Loop 3                     |  3709168|  3709168|    231823|          -|          -|    16|    no    |
+        | + Loop 3.1                  |   231820|   231820|     23182|          -|          -|    10|    no    |
+        |  ++ Loop 3.1.1              |    23180|    23180|      2318|          -|          -|    10|    no    |
+        |   +++ Loop 3.1.1.1          |     2310|     2310|       462|          -|          -|     5|    no    |
+        |    ++++ Loop 3.1.1.1.1      |      460|      460|        92|          -|          -|     5|    no    |
+        |     +++++ Loop 3.1.1.1.1.1  |       90|       90|        15|          -|          -|     6|    no    |
+        |- Loop 4                     |     9392|     9392|       587|          -|          -|    16|    no    |
+        | + Loop 4.1                  |      585|      585|       117|          -|          -|     5|    no    |
+        |  ++ Loop 4.1.1              |      115|      115|        23|          -|          -|     5|    no    |
+        |   +++ Loop 4.1.1.1          |       20|       20|        10|          -|          -|     2|    no    |
+        |    ++++ Loop 4.1.1.1.1      |        8|        8|         4|          -|          -|     2|    no    |
+        |- Loop 5                     |      992|      992|        62|          -|          -|    16|    no    |
+        | + Loop 5.1                  |       60|       60|        12|          -|          -|     5|    no    |
+        |  ++ Loop 5.1.1              |       10|       10|         2|          -|          -|     5|    no    |
+        |- Loop 6                     |   673200|   673200|      5610|          -|          -|   120|    no    |
+        | + Loop 6.1                  |     5600|     5600|        14|          -|          -|   400|    no    |
+        |- Loop 7                     |   141960|   141960|      1690|          -|          -|    84|    no    |
+        | + Loop 7.1                  |     1680|     1680|        14|          -|          -|   120|    no    |
+        |- Loop 8                     |    11870|    11870|      1187|          -|          -|    10|    no    |
+        | + Loop 8.1                  |     1176|     1176|        14|          -|          -|    84|    no    |
+        +-----------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 147
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond25)
+	29  / (exitcond25)
+3 --> 
+	4  / true
+4 --> 
+	5  / (!exitcond29)
+	2  / (exitcond29)
+5 --> 
+	6  / (!exitcond28)
+	4  / (exitcond28)
+6 --> 
+	23  / (exitcond27)
+	7  / (!exitcond27)
+7 --> 
+	8  / (!exitcond26)
+	6  / (exitcond26)
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	7  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	5  / true
+29 --> 
+	30  / (!exitcond24)
+	38  / (exitcond24)
+30 --> 
+	31  / (!exitcond23)
+	29  / (exitcond23)
+31 --> 
+	32  / (!exitcond22)
+	30  / (exitcond22)
+32 --> 
+	33  / true
+33 --> 
+	34  / (!exitcond21)
+	31  / (exitcond21)
+34 --> 
+	35  / (!exitcond20)
+	33  / (exitcond20)
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	34  / true
+38 --> 
+	39  / (!exitcond19)
+	65  / (exitcond19)
+39 --> 
+	40  / true
+40 --> 
+	41  / (!exitcond18)
+	38  / (exitcond18)
+41 --> 
+	42  / (!exitcond17)
+	40  / (exitcond17)
+42 --> 
+	59  / (exitcond16)
+	43  / (!exitcond16)
+43 --> 
+	44  / (!exitcond15)
+	42  / (exitcond15)
+44 --> 
+	45  / (!exitcond14)
+	43  / (exitcond14)
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	44  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	62  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / true
+64 --> 
+	41  / true
+65 --> 
+	66  / (!exitcond13)
+	74  / (exitcond13)
+66 --> 
+	67  / (!exitcond12)
+	65  / (exitcond12)
+67 --> 
+	68  / (!exitcond11)
+	66  / (exitcond11)
+68 --> 
+	69  / true
+69 --> 
+	70  / (!exitcond10)
+	67  / (exitcond10)
+70 --> 
+	71  / (!exitcond9)
+	69  / (exitcond9)
+71 --> 
+	72  / true
+72 --> 
+	73  / true
+73 --> 
+	70  / true
+74 --> 
+	75  / (!exitcond8)
+	78  / (exitcond8)
+75 --> 
+	76  / (!exitcond7)
+	74  / (exitcond7)
+76 --> 
+	77  / (!exitcond6)
+	75  / (exitcond6)
+77 --> 
+	76  / true
+78 --> 
+	79  / (!exitcond5)
+	101  / (exitcond5)
+79 --> 
+	80  / (!exitcond4)
+	93  / (exitcond4)
+80 --> 
+	81  / true
+81 --> 
+	82  / true
+82 --> 
+	83  / true
+83 --> 
+	84  / true
+84 --> 
+	85  / true
+85 --> 
+	86  / true
+86 --> 
+	87  / true
+87 --> 
+	88  / true
+88 --> 
+	89  / true
+89 --> 
+	90  / true
+90 --> 
+	91  / true
+91 --> 
+	92  / true
+92 --> 
+	79  / true
+93 --> 
+	94  / true
+94 --> 
+	95  / true
+95 --> 
+	96  / true
+96 --> 
+	97  / true
+97 --> 
+	98  / true
+98 --> 
+	99  / true
+99 --> 
+	100  / true
+100 --> 
+	78  / true
+101 --> 
+	102  / (!exitcond3)
+	124  / (exitcond3)
+102 --> 
+	103  / (!exitcond2)
+	116  / (exitcond2)
+103 --> 
+	104  / true
+104 --> 
+	105  / true
+105 --> 
+	106  / true
+106 --> 
+	107  / true
+107 --> 
+	108  / true
+108 --> 
+	109  / true
+109 --> 
+	110  / true
+110 --> 
+	111  / true
+111 --> 
+	112  / true
+112 --> 
+	113  / true
+113 --> 
+	114  / true
+114 --> 
+	115  / true
+115 --> 
+	102  / true
+116 --> 
+	117  / true
+117 --> 
+	118  / true
+118 --> 
+	119  / true
+119 --> 
+	120  / true
+120 --> 
+	121  / true
+121 --> 
+	122  / true
+122 --> 
+	123  / true
+123 --> 
+	101  / true
+124 --> 
+	125  / (!exitcond1)
+125 --> 
+	126  / (!exitcond)
+	139  / (exitcond)
+126 --> 
+	127  / true
+127 --> 
+	128  / true
+128 --> 
+	129  / true
+129 --> 
+	130  / true
+130 --> 
+	131  / true
+131 --> 
+	132  / true
+132 --> 
+	133  / true
+133 --> 
+	134  / true
+134 --> 
+	135  / true
+135 --> 
+	136  / true
+136 --> 
+	137  / true
+137 --> 
+	138  / true
+138 --> 
+	125  / true
+139 --> 
+	140  / true
+140 --> 
+	141  / true
+141 --> 
+	142  / true
+142 --> 
+	143  / true
+143 --> 
+	144  / true
+144 --> 
+	145  / true
+145 --> 
+	146  / true
+146 --> 
+	147  / true
+147 --> 
+	124  / true
+* FSM state operations: 
+
+ <State 1>: 1.59ns
+ST_1: StgValue_148 (11)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap(i32 %index) nounwind, !map !560
+
+ST_1: StgValue_149 (12)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !566
+
+ST_1: StgValue_150 (13)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @lenet5_ap2_str) nounwind
+
+ST_1: index_read (14)  [1/1] 0.00ns
+:3  %index_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %index) nounwind
+
+ST_1: tmp (15)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:16
+:4  %tmp = trunc i32 %index_read to i25
+
+ST_1: StgValue_153 (16)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:16
+:5  br label %.loopexit59
+
+
+ <State 2>: 3.25ns
+ST_2: channel (18)  [1/1] 0.00ns
+.loopexit59:0  %channel = phi i3 [ 0, %0 ], [ %channel_1, %.loopexit59.loopexit ]
+
+ST_2: exitcond25 (19)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:16
+.loopexit59:1  %exitcond25 = icmp eq i3 %channel, -2
+
+ST_2: empty (20)  [1/1] 0.00ns
+.loopexit59:2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6) nounwind
+
+ST_2: channel_1 (21)  [1/1] 2.26ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:16
+.loopexit59:3  %channel_1 = add i3 %channel, 1
+
+ST_2: StgValue_158 (22)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:16
+.loopexit59:4  br i1 %exitcond25, label %.preheader48.preheader, label %.preheader52.preheader
+
+ST_2: tmp_1 (24)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:27
+.preheader52.preheader:0  %tmp_1 = call i64 @_ssdm_op_BitConcatenate.i64.i61.i3(i61 2, i3 %channel)
+
+ST_2: conv_bias_addr (25)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:27
+.preheader52.preheader:1  %conv_bias_addr = getelementptr [48 x double]* @conv_bias, i64 0, i64 %tmp_1
+
+ST_2: conv_bias_load (31)  [2/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:27
+.preheader52.preheader:7  %conv_bias_load = load double* %conv_bias_addr, align 8
+
+ST_2: max_value (122)  [1/1] 0.00ns
+.preheader48.preheader:0  %max_value = alloca double
+
+ST_2: StgValue_163 (123)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:37
+.preheader48.preheader:1  br label %.preheader48
+
+
+ <State 3>: 3.79ns
+ST_3: p_shl3 (26)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:19
+.preheader52.preheader:2  %p_shl3 = call i64 @_ssdm_op_BitConcatenate.i64.i56.i3.i5(i56 2, i3 %channel, i5 0)
+
+ST_3: p_shl4 (27)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:19
+.preheader52.preheader:3  %p_shl4 = call i64 @_ssdm_op_BitConcatenate.i64.i59.i3.i2(i59 2, i3 %channel, i2 0)
+
+ST_3: tmp_2 (28)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:19
+.preheader52.preheader:4  %tmp_2 = sub i64 %p_shl3, %p_shl4
+
+ST_3: p_shl2 (29)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader52.preheader:5  %p_shl2 = call i64 @_ssdm_op_BitConcatenate.i64.i60.i3.i1(i60 2, i3 %channel, i1 false)
+
+ST_3: tmp_5 (30)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader52.preheader:6  %tmp_5 = sub i64 %p_shl3, %p_shl2
+
+ST_3: conv_bias_load (31)  [1/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:27
+.preheader52.preheader:7  %conv_bias_load = load double* %conv_bias_addr, align 8
+
+ST_3: StgValue_170 (32)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:17
+.preheader52.preheader:8  br label %.preheader52
+
+
+ <State 4>: 6.22ns
+ST_4: col (34)  [1/1] 0.00ns
+.preheader52:0  %col = phi i5 [ 0, %.preheader52.preheader ], [ %col_1, %.preheader52.loopexit ]
+
+ST_4: exitcond29 (35)  [1/1] 3.31ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:17
+.preheader52:1  %exitcond29 = icmp eq i5 %col, -4
+
+ST_4: empty_5 (36)  [1/1] 0.00ns
+.preheader52:2  %empty_5 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 28, i64 28, i64 28) nounwind
+
+ST_4: col_1 (37)  [1/1] 2.33ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:17
+.preheader52:3  %col_1 = add i5 %col, 1
+
+ST_4: StgValue_175 (38)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:17
+.preheader52:4  br i1 %exitcond29, label %.loopexit59.loopexit, label %.preheader51.preheader
+
+ST_4: tmp_4 (40)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:19
+.preheader51.preheader:0  %tmp_4 = zext i5 %col to i64
+
+ST_4: tmp_12 (41)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:19
+.preheader51.preheader:1  %tmp_12 = add i64 %tmp_2, %tmp_4
+
+ST_4: tmp_16 (42)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:19
+.preheader51.preheader:2  %tmp_16 = trunc i64 %tmp_12 to i12
+
+ST_4: p_shl5_cast (43)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:19
+.preheader51.preheader:3  %p_shl5_cast = call i17 @_ssdm_op_BitConcatenate.i17.i12.i5(i12 %tmp_16, i5 0)
+
+ST_4: tmp_17 (44)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:19
+.preheader51.preheader:4  %tmp_17 = trunc i64 %tmp_12 to i15
+
+ST_4: p_shl6_cast (45)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:19
+.preheader51.preheader:5  %p_shl6_cast = call i17 @_ssdm_op_BitConcatenate.i17.i15.i2(i15 %tmp_17, i2 0)
+
+ST_4: tmp_19 (46)  [1/1] 2.43ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:19
+.preheader51.preheader:6  %tmp_19 = sub i17 %p_shl5_cast, %p_shl6_cast
+
+ST_4: StgValue_183 (47)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:18
+.preheader51.preheader:7  br label %.preheader51
+
+ST_4: StgValue_184 (120)  [1/1] 0.00ns
+.loopexit59.loopexit:0  br label %.loopexit59
+
+
+ <State 5>: 3.31ns
+ST_5: row (49)  [1/1] 0.00ns
+.preheader51:0  %row = phi i5 [ %row_1, %._crit_edge ], [ 0, %.preheader51.preheader ]
+
+ST_5: exitcond28 (50)  [1/1] 3.31ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:18
+.preheader51:1  %exitcond28 = icmp eq i5 %row, -4
+
+ST_5: empty_6 (51)  [1/1] 0.00ns
+.preheader51:2  %empty_6 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 28, i64 28, i64 28) nounwind
+
+ST_5: row_1 (52)  [1/1] 2.33ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:18
+.preheader51:3  %row_1 = add i5 %row, 1
+
+ST_5: StgValue_189 (53)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:18
+.preheader51:4  br i1 %exitcond28, label %.preheader52.loopexit, label %1
+
+ST_5: tmp_cast (55)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:19
+:0  %tmp_cast = zext i5 %row to i17
+
+ST_5: tmp_61 (56)  [1/1] 2.43ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:19
+:1  %tmp_61 = add i17 %tmp_19, %tmp_cast
+
+ST_5: tmp_136_cast (57)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:19
+:2  %tmp_136_cast = zext i17 %tmp_61 to i64
+
+ST_5: conv_dot_addr (58)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:19
+:3  %conv_dot_addr = getelementptr [37632 x double]* @conv_dot, i64 0, i64 %tmp_136_cast
+
+ST_5: StgValue_194 (59)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:20
+:4  br label %.loopexit58
+
+ST_5: StgValue_195 (118)  [1/1] 0.00ns
+.preheader52.loopexit:0  br label %.preheader52
+
+
+ <State 6>: 8.23ns
+ST_6: tmp_3 (61)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.loopexit58:0  %tmp_3 = phi double [ 0.000000e+00, %1 ], [ %tmp_18, %.loopexit58.loopexit ]
+
+ST_6: fil_col (62)  [1/1] 0.00ns
+.loopexit58:1  %fil_col = phi i3 [ 0, %1 ], [ %fil_col_1, %.loopexit58.loopexit ]
+
+ST_6: fil_col_cast (63)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:20
+.loopexit58:2  %fil_col_cast = zext i3 %fil_col to i5
+
+ST_6: exitcond27 (64)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:20
+.loopexit58:3  %exitcond27 = icmp eq i3 %fil_col, -3
+
+ST_6: empty_7 (65)  [1/1] 0.00ns
+.loopexit58:4  %empty_7 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind
+
+ST_6: fil_col_1 (66)  [1/1] 2.26ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:20
+.loopexit58:5  %fil_col_1 = add i3 %fil_col, 1
+
+ST_6: StgValue_202 (67)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:20
+.loopexit58:6  br i1 %exitcond27, label %._crit_edge, label %.preheader50.preheader
+
+ST_6: tmp_15 (69)  [1/1] 2.33ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader50.preheader:0  %tmp_15 = add i5 %col, %fil_col_cast
+
+ST_6: tmp_17_cast (70)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:21
+.preheader50.preheader:1  %tmp_17_cast = zext i3 %fil_col to i14
+
+ST_6: StgValue_205 (71)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:21
+.preheader50.preheader:2  br label %.preheader50
+
+ST_6: tmp_13 (105)  [5/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:27
+._crit_edge:0  %tmp_13 = fadd double %tmp_3, %conv_bias_load
+
+
+ <State 7>: 8.71ns
+ST_7: tmp_18 (73)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader50:0  %tmp_18 = phi double [ %tmp_67, %.preheader49.preheader ], [ %tmp_3, %.preheader50.preheader ]
+
+ST_7: fil_row (74)  [1/1] 0.00ns
+.preheader50:1  %fil_row = phi i3 [ %fil_row_1, %.preheader49.preheader ], [ 0, %.preheader50.preheader ]
+
+ST_7: fil_row_cast (75)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:21
+.preheader50:2  %fil_row_cast = zext i3 %fil_row to i5
+
+ST_7: exitcond26 (76)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:21
+.preheader50:3  %exitcond26 = icmp eq i3 %fil_row, -3
+
+ST_7: empty_8 (77)  [1/1] 0.00ns
+.preheader50:4  %empty_8 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind
+
+ST_7: fil_row_1 (78)  [1/1] 2.26ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:21
+.preheader50:5  %fil_row_1 = add i3 %fil_row, 1
+
+ST_7: StgValue_213 (79)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:21
+.preheader50:6  br i1 %exitcond26, label %.loopexit58.loopexit, label %.preheader49.preheader
+
+ST_7: tmp_28 (81)  [1/1] 2.33ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:0  %tmp_28 = add i5 %row, %fil_row_cast
+
+ST_7: tmp_135 (82)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:1  %tmp_135 = call i10 @_ssdm_op_BitConcatenate.i10.i5.i5(i5 %tmp_15, i5 %tmp_28)
+
+ST_7: tmp_160_cast (83)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:2  %tmp_160_cast = zext i10 %tmp_135 to i25
+
+ST_7: tmp_136 (84)  [1/1] 3.36ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:3  %tmp_136 = mul i25 10000, %tmp_160_cast
+
+ST_7: tmp_137 (85)  [1/1] 3.02ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:4  %tmp_137 = add i25 %tmp, %tmp_136
+
+ST_7: tmp_30 (89)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:8  %tmp_30 = zext i3 %fil_row to i64
+
+ST_7: tmp_138 (90)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:9  %tmp_138 = add i64 %tmp_30, %tmp_5
+
+ST_7: tmp_139 (91)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:10  %tmp_139 = trunc i64 %tmp_138 to i14
+
+ST_7: tmp_140 (92)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:11  %tmp_140 = trunc i64 %tmp_138 to i12
+
+ST_7: p_shl7_cast (93)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:12  %p_shl7_cast = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_140, i2 0)
+
+ST_7: tmp_141 (94)  [1/1] 1.92ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:13  %tmp_141 = add i14 %p_shl7_cast, %tmp_139
+
+ST_7: tmp_142 (95)  [1/1] 1.92ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:14  %tmp_142 = add i14 %tmp_17_cast, %tmp_141
+
+ST_7: StgValue_226 (103)  [1/1] 0.00ns
+.loopexit58.loopexit:0  br label %.loopexit58
+
+
+ <State 8>: 3.25ns
+ST_8: tmp_162_cast (86)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:5  %tmp_162_cast = sext i25 %tmp_137 to i64
+
+ST_8: in_addr (87)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:6  %in_addr = getelementptr [10240000 x double]* @in_r, i64 0, i64 %tmp_162_cast
+
+ST_8: in_load (88)  [4/4] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:7  %in_load = load double* %in_addr, align 8
+
+
+ <State 9>: 3.25ns
+ST_9: in_load (88)  [3/4] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:7  %in_load = load double* %in_addr, align 8
+
+
+ <State 10>: 3.25ns
+ST_10: in_load (88)  [2/4] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:7  %in_load = load double* %in_addr, align 8
+
+ST_10: tmp_166_cast (96)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:15  %tmp_166_cast = zext i14 %tmp_142 to i64
+
+ST_10: conv_weight_addr (97)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:16  %conv_weight_addr = getelementptr [7200 x double]* @conv_weight, i64 0, i64 %tmp_166_cast
+
+ST_10: conv_weight_load (98)  [2/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:17  %conv_weight_load = load double* %conv_weight_addr, align 8
+
+
+ <State 11>: 3.25ns
+ST_11: in_load (88)  [1/4] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:7  %in_load = load double* %in_addr, align 8
+
+ST_11: conv_weight_load (98)  [1/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:17  %conv_weight_load = load double* %conv_weight_addr, align 8
+
+
+ <State 12>: 7.79ns
+ST_12: tmp_58 (99)  [6/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:18  %tmp_58 = fmul double %in_load, %conv_weight_load
+
+
+ <State 13>: 7.79ns
+ST_13: tmp_58 (99)  [5/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:18  %tmp_58 = fmul double %in_load, %conv_weight_load
+
+
+ <State 14>: 7.79ns
+ST_14: tmp_58 (99)  [4/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:18  %tmp_58 = fmul double %in_load, %conv_weight_load
+
+
+ <State 15>: 7.79ns
+ST_15: tmp_58 (99)  [3/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:18  %tmp_58 = fmul double %in_load, %conv_weight_load
+
+
+ <State 16>: 7.79ns
+ST_16: tmp_58 (99)  [2/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:18  %tmp_58 = fmul double %in_load, %conv_weight_load
+
+
+ <State 17>: 7.79ns
+ST_17: tmp_58 (99)  [1/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:18  %tmp_58 = fmul double %in_load, %conv_weight_load
+
+
+ <State 18>: 8.23ns
+ST_18: tmp_67 (100)  [5/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:19  %tmp_67 = fadd double %tmp_18, %tmp_58
+
+
+ <State 19>: 8.23ns
+ST_19: tmp_67 (100)  [4/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:19  %tmp_67 = fadd double %tmp_18, %tmp_58
+
+
+ <State 20>: 8.23ns
+ST_20: tmp_67 (100)  [3/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:19  %tmp_67 = fadd double %tmp_18, %tmp_58
+
+
+ <State 21>: 8.23ns
+ST_21: tmp_67 (100)  [2/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:19  %tmp_67 = fadd double %tmp_18, %tmp_58
+
+
+ <State 22>: 8.23ns
+ST_22: tmp_67 (100)  [1/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:23
+.preheader49.preheader:19  %tmp_67 = fadd double %tmp_18, %tmp_58
+
+ST_22: StgValue_248 (101)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:21
+.preheader49.preheader:20  br label %.preheader50
+
+
+ <State 23>: 8.23ns
+ST_23: tmp_13 (105)  [4/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:27
+._crit_edge:0  %tmp_13 = fadd double %tmp_3, %conv_bias_load
+
+
+ <State 24>: 8.23ns
+ST_24: tmp_13 (105)  [3/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:27
+._crit_edge:0  %tmp_13 = fadd double %tmp_3, %conv_bias_load
+
+
+ <State 25>: 8.23ns
+ST_25: tmp_13 (105)  [2/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:27
+._crit_edge:0  %tmp_13 = fadd double %tmp_3, %conv_bias_load
+
+
+ <State 26>: 8.23ns
+ST_26: tmp_13 (105)  [1/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:27
+._crit_edge:0  %tmp_13 = fadd double %tmp_3, %conv_bias_load
+
+
+ <State 27>: 6.82ns
+ST_27: tmp_13_to_int (106)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:27
+._crit_edge:1  %tmp_13_to_int = bitcast double %tmp_13 to i64
+
+ST_27: tmp_14 (107)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:27
+._crit_edge:2  %tmp_14 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %tmp_13_to_int, i32 52, i32 62)
+
+ST_27: tmp_106 (108)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:27
+._crit_edge:3  %tmp_106 = trunc i64 %tmp_13_to_int to i52
+
+ST_27: notlhs (109)  [1/1] 2.94ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:27
+._crit_edge:4  %notlhs = icmp ne i11 %tmp_14, -1
+
+ST_27: notrhs (110)  [1/1] 3.63ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:27
+._crit_edge:5  %notrhs = icmp eq i52 %tmp_106, 0
+
+ST_27: tmp_45 (112)  [1/1] 6.82ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:29
+._crit_edge:7  %tmp_45 = fcmp olt double %tmp_13, 0.000000e+00
+
+
+ <State 28>: 5.32ns
+ST_28: tmp_39 (111)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:27 (grouped into LUT with out node storemerge)
+._crit_edge:6  %tmp_39 = or i1 %notrhs, %notlhs
+
+ST_28: tmp_51 (113)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:29 (grouped into LUT with out node storemerge)
+._crit_edge:8  %tmp_51 = and i1 %tmp_39, %tmp_45
+
+ST_28: storemerge (114)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:29 (out node of the LUT)
+._crit_edge:9  %storemerge = select i1 %tmp_51, double 0.000000e+00, double %tmp_13
+
+ST_28: StgValue_262 (115)  [1/1] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:27
+._crit_edge:10  store double %storemerge, double* %conv_dot_addr, align 8
+
+ST_28: StgValue_263 (116)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:18
+._crit_edge:11  br label %.preheader51
+
+
+ <State 29>: 3.79ns
+ST_29: channel1 (125)  [1/1] 0.00ns
+.preheader48:0  %channel1 = phi i3 [ 0, %.preheader48.preheader ], [ %channel_2, %.preheader48.loopexit ]
+
+ST_29: max_value_load (126)  [1/1] 0.00ns
+.preheader48:1  %max_value_load = load double* %max_value
+
+ST_29: exitcond24 (127)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:37
+.preheader48:2  %exitcond24 = icmp eq i3 %channel1, -2
+
+ST_29: empty_9 (128)  [1/1] 0.00ns
+.preheader48:3  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6) nounwind
+
+ST_29: channel_2 (129)  [1/1] 2.26ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:37
+.preheader48:4  %channel_2 = add i3 %channel1, 1
+
+ST_29: StgValue_269 (130)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:37
+.preheader48:5  br i1 %exitcond24, label %.preheader44.preheader, label %.preheader47.preheader
+
+ST_29: p_shl1 (132)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:48
+.preheader47.preheader:0  %p_shl1 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i3.i4(i57 2, i3 %channel1, i4 0)
+
+ST_29: p_shl5 (133)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:48
+.preheader47.preheader:1  %p_shl5 = call i64 @_ssdm_op_BitConcatenate.i64.i60.i3.i1(i60 2, i3 %channel1, i1 false)
+
+ST_29: tmp_6 (134)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:48
+.preheader47.preheader:2  %tmp_6 = sub i64 %p_shl1, %p_shl5
+
+ST_29: p_shl8 (135)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:40
+.preheader47.preheader:3  %p_shl8 = call i64 @_ssdm_op_BitConcatenate.i64.i56.i3.i5(i56 2, i3 %channel1, i5 0)
+
+ST_29: p_shl9 (136)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:40
+.preheader47.preheader:4  %p_shl9 = call i64 @_ssdm_op_BitConcatenate.i64.i59.i3.i2(i59 2, i3 %channel1, i2 0)
+
+ST_29: tmp_s (137)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:40
+.preheader47.preheader:5  %tmp_s = sub i64 %p_shl8, %p_shl9
+
+ST_29: StgValue_276 (138)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:38
+.preheader47.preheader:6  br label %.preheader47
+
+ST_29: StgValue_277 (241)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:55
+.preheader44.preheader:0  br label %.preheader44
+
+
+ <State 30>: 6.22ns
+ST_30: col2 (140)  [1/1] 0.00ns
+.preheader47:0  %col2 = phi i4 [ 0, %.preheader47.preheader ], [ %col_2, %.preheader47.loopexit ]
+
+ST_30: exitcond23 (141)  [1/1] 3.10ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:38
+.preheader47:1  %exitcond23 = icmp eq i4 %col2, -2
+
+ST_30: empty_10 (142)  [1/1] 0.00ns
+.preheader47:2  %empty_10 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14) nounwind
+
+ST_30: col_2 (143)  [1/1] 2.35ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:38
+.preheader47:3  %col_2 = add i4 %col2, 1
+
+ST_30: StgValue_282 (144)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:38
+.preheader47:4  br i1 %exitcond23, label %.preheader48.loopexit, label %.preheader46.preheader
+
+ST_30: tmp_7 (146)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:40
+.preheader46.preheader:0  %tmp_7 = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %col2, i1 false)
+
+ST_30: tmp_8 (147)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:40
+.preheader46.preheader:1  %tmp_8 = zext i5 %tmp_7 to i64
+
+ST_30: tmp_29 (148)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:40
+.preheader46.preheader:2  %tmp_29 = add i64 %tmp_8, %tmp_s
+
+ST_30: tmp_35 (149)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:40
+.preheader46.preheader:3  %tmp_35 = trunc i64 %tmp_29 to i12
+
+ST_30: p_shl14_cast (150)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:40
+.preheader46.preheader:4  %p_shl14_cast = call i17 @_ssdm_op_BitConcatenate.i17.i12.i5(i12 %tmp_35, i5 0)
+
+ST_30: tmp_37 (151)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:40
+.preheader46.preheader:5  %tmp_37 = trunc i64 %tmp_29 to i15
+
+ST_30: p_shl15_cast (152)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:40
+.preheader46.preheader:6  %p_shl15_cast = call i17 @_ssdm_op_BitConcatenate.i17.i15.i2(i15 %tmp_37, i2 0)
+
+ST_30: tmp_42 (153)  [1/1] 2.43ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:40
+.preheader46.preheader:7  %tmp_42 = sub i17 %p_shl14_cast, %p_shl15_cast
+
+ST_30: tmp_9 (154)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:48
+.preheader46.preheader:8  %tmp_9 = zext i4 %col2 to i64
+
+ST_30: tmp_44 (155)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:48
+.preheader46.preheader:9  %tmp_44 = add i64 %tmp_9, %tmp_6
+
+ST_30: tmp_48 (156)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:48
+.preheader46.preheader:10  %tmp_48 = trunc i64 %tmp_44 to i11
+
+ST_30: p_shl12_cast (157)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:48
+.preheader46.preheader:11  %p_shl12_cast = call i15 @_ssdm_op_BitConcatenate.i15.i11.i4(i11 %tmp_48, i4 0)
+
+ST_30: tmp_55 (158)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:48
+.preheader46.preheader:12  %tmp_55 = trunc i64 %tmp_44 to i14
+
+ST_30: p_shl13_cast (159)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:48
+.preheader46.preheader:13  %p_shl13_cast = call i15 @_ssdm_op_BitConcatenate.i15.i14.i1(i14 %tmp_55, i1 false)
+
+ST_30: tmp_57 (160)  [1/1] 2.35ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:48
+.preheader46.preheader:14  %tmp_57 = sub i15 %p_shl12_cast, %p_shl13_cast
+
+ST_30: StgValue_298 (161)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:39
+.preheader46.preheader:15  br label %.preheader46
+
+ST_30: StgValue_299 (239)  [1/1] 0.00ns
+.preheader48.loopexit:0  br label %.preheader48
+
+
+ <State 31>: 5.68ns
+ST_31: row3 (163)  [1/1] 0.00ns
+.preheader46:0  %row3 = phi i4 [ %row_2, %3 ], [ 0, %.preheader46.preheader ]
+
+ST_31: exitcond22 (164)  [1/1] 3.10ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:39
+.preheader46:1  %exitcond22 = icmp eq i4 %row3, -2
+
+ST_31: empty_11 (165)  [1/1] 0.00ns
+.preheader46:2  %empty_11 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14) nounwind
+
+ST_31: row_2 (166)  [1/1] 2.35ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:39
+.preheader46:3  %row_2 = add i4 %row3, 1
+
+ST_31: StgValue_304 (167)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:39
+.preheader46:4  br i1 %exitcond22, label %.preheader47.loopexit, label %2
+
+ST_31: tmp_11 (169)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:40
+:0  %tmp_11 = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %row3, i1 false)
+
+ST_31: tmp_12_cast (170)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:40
+:1  %tmp_12_cast = zext i5 %tmp_11 to i17
+
+ST_31: tmp_101 (171)  [1/1] 2.43ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:40
+:2  %tmp_101 = add i17 %tmp_12_cast, %tmp_42
+
+ST_31: tmp_143_cast (172)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:40
+:3  %tmp_143_cast = zext i17 %tmp_101 to i64
+
+ST_31: conv_dot_addr_1 (173)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:40
+:4  %conv_dot_addr_1 = getelementptr [37632 x double]* @conv_dot, i64 0, i64 %tmp_143_cast
+
+ST_31: max_value_2 (174)  [2/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:40
+:5  %max_value_2 = load double* %conv_dot_addr_1, align 8
+
+ST_31: StgValue_311 (237)  [1/1] 0.00ns
+.preheader47.loopexit:0  br label %.preheader47
+
+
+ <State 32>: 4.84ns
+ST_32: max_value_2 (174)  [1/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:40
+:5  %max_value_2 = load double* %conv_dot_addr_1, align 8
+
+ST_32: StgValue_313 (175)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:41
+:6  br label %.loopexit57
+
+
+ <State 33>: 8.56ns
+ST_33: fil_col4 (177)  [1/1] 0.00ns
+.loopexit57:0  %fil_col4 = phi i2 [ 0, %2 ], [ %fil_col_2, %.loopexit57.loopexit ]
+
+ST_33: max_value_3 (178)  [1/1] 0.00ns
+.loopexit57:1  %max_value_3 = phi double [ %max_value_2, %2 ], [ %max_value_4, %.loopexit57.loopexit ]
+
+ST_33: fil_col4_cast (179)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:41
+.loopexit57:2  %fil_col4_cast = zext i2 %fil_col4 to i5
+
+ST_33: exitcond21 (180)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:41
+.loopexit57:3  %exitcond21 = icmp eq i2 %fil_col4, -2
+
+ST_33: empty_12 (181)  [1/1] 0.00ns
+.loopexit57:4  %empty_12 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2) nounwind
+
+ST_33: fil_col_2 (182)  [1/1] 2.17ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:41
+.loopexit57:5  %fil_col_2 = add i2 %fil_col4, 1
+
+ST_33: StgValue_320 (183)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:41
+.loopexit57:6  br i1 %exitcond21, label %3, label %.preheader45.preheader
+
+ST_33: tmp_26 (185)  [1/1] 2.33ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+.preheader45.preheader:0  %tmp_26 = add i5 %fil_col4_cast, %tmp_7
+
+ST_33: tmp_27 (186)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+.preheader45.preheader:1  %tmp_27 = zext i5 %tmp_26 to i64
+
+ST_33: tmp_131 (187)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+.preheader45.preheader:2  %tmp_131 = add i64 %tmp_s, %tmp_27
+
+ST_33: tmp_132 (188)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+.preheader45.preheader:3  %tmp_132 = trunc i64 %tmp_131 to i12
+
+ST_33: p_shl16_cast (189)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+.preheader45.preheader:4  %p_shl16_cast = call i17 @_ssdm_op_BitConcatenate.i17.i12.i5(i12 %tmp_132, i5 0)
+
+ST_33: tmp_133 (190)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+.preheader45.preheader:5  %tmp_133 = trunc i64 %tmp_131 to i15
+
+ST_33: p_shl17_cast (191)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+.preheader45.preheader:6  %p_shl17_cast = call i17 @_ssdm_op_BitConcatenate.i17.i15.i2(i15 %tmp_133, i2 0)
+
+ST_33: tmp_134 (192)  [1/1] 2.43ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+.preheader45.preheader:7  %tmp_134 = sub i17 %p_shl16_cast, %p_shl17_cast
+
+ST_33: StgValue_329 (193)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:42
+.preheader45.preheader:8  br label %.preheader45
+
+ST_33: tmp_25_cast (229)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:48
+:0  %tmp_25_cast = zext i4 %row3 to i15
+
+ST_33: tmp_130 (230)  [1/1] 2.35ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:48
+:1  %tmp_130 = add i15 %tmp_57, %tmp_25_cast
+
+ST_33: tmp_154_cast (231)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:48
+:2  %tmp_154_cast = zext i15 %tmp_130 to i64
+
+ST_33: pool_dot_addr (232)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:48
+:3  %pool_dot_addr = getelementptr [9408 x double]* @pool_dot, i64 0, i64 %tmp_154_cast
+
+ST_33: StgValue_334 (233)  [1/1] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:48
+:4  store double %max_value_3, double* %pool_dot_addr, align 8
+
+ST_33: StgValue_335 (234)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:40
+:5  store double %max_value_3, double* %max_value
+
+ST_33: StgValue_336 (235)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:39
+:6  br label %.preheader46
+
+
+ <State 34>: 8.02ns
+ST_34: fil_row5 (195)  [1/1] 0.00ns
+.preheader45:0  %fil_row5 = phi i2 [ %fil_row_2, %._crit_edge53 ], [ 0, %.preheader45.preheader ]
+
+ST_34: max_value_4 (196)  [1/1] 0.00ns
+.preheader45:1  %max_value_4 = phi double [ %max_value_5, %._crit_edge53 ], [ %max_value_3, %.preheader45.preheader ]
+
+ST_34: fil_row5_cast (197)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:42
+.preheader45:2  %fil_row5_cast = zext i2 %fil_row5 to i5
+
+ST_34: exitcond20 (198)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:42
+.preheader45:3  %exitcond20 = icmp eq i2 %fil_row5, -2
+
+ST_34: empty_13 (199)  [1/1] 0.00ns
+.preheader45:4  %empty_13 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2) nounwind
+
+ST_34: fil_row_2 (200)  [1/1] 2.17ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:42
+.preheader45:5  %fil_row_2 = add i2 %fil_row5, 1
+
+ST_34: StgValue_343 (201)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:42
+.preheader45:6  br i1 %exitcond20, label %.loopexit57.loopexit, label %._crit_edge53
+
+ST_34: tmp_43 (203)  [1/1] 2.33ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+._crit_edge53:0  %tmp_43 = add i5 %fil_row5_cast, %tmp_11
+
+ST_34: tmp_44_cast (204)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+._crit_edge53:1  %tmp_44_cast = zext i5 %tmp_43 to i17
+
+ST_34: tmp_150 (205)  [1/1] 2.43ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+._crit_edge53:2  %tmp_150 = add i17 %tmp_134, %tmp_44_cast
+
+ST_34: tmp_173_cast (206)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+._crit_edge53:3  %tmp_173_cast = zext i17 %tmp_150 to i64
+
+ST_34: conv_dot_addr_4 (207)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+._crit_edge53:4  %conv_dot_addr_4 = getelementptr [37632 x double]* @conv_dot, i64 0, i64 %tmp_173_cast
+
+ST_34: max_value_7 (208)  [2/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+._crit_edge53:5  %max_value_7 = load double* %conv_dot_addr_4, align 8
+
+ST_34: StgValue_350 (227)  [1/1] 0.00ns
+.loopexit57.loopexit:0  br label %.loopexit57
+
+
+ <State 35>: 3.25ns
+ST_35: max_value_7 (208)  [1/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+._crit_edge53:5  %max_value_7 = load double* %conv_dot_addr_4, align 8
+
+
+ <State 36>: 6.82ns
+ST_36: tmp_93 (222)  [1/1] 6.82ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+._crit_edge53:19  %tmp_93 = fcmp olt double %max_value_4, %max_value_7
+
+
+ <State 37>: 7.77ns
+ST_37: max_value_4_to_int (209)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+._crit_edge53:6  %max_value_4_to_int = bitcast double %max_value_4 to i64
+
+ST_37: tmp_86 (210)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+._crit_edge53:7  %tmp_86 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %max_value_4_to_int, i32 52, i32 62)
+
+ST_37: tmp_151 (211)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+._crit_edge53:8  %tmp_151 = trunc i64 %max_value_4_to_int to i52
+
+ST_37: max_value_16_to_int (212)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+._crit_edge53:9  %max_value_16_to_int = bitcast double %max_value_7 to i64
+
+ST_37: tmp_88 (213)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+._crit_edge53:10  %tmp_88 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %max_value_16_to_int, i32 52, i32 62)
+
+ST_37: tmp_152 (214)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+._crit_edge53:11  %tmp_152 = trunc i64 %max_value_16_to_int to i52
+
+ST_37: notlhs2 (215)  [1/1] 2.94ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+._crit_edge53:12  %notlhs2 = icmp ne i11 %tmp_86, -1
+
+ST_37: notrhs2 (216)  [1/1] 3.63ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+._crit_edge53:13  %notrhs2 = icmp eq i52 %tmp_151, 0
+
+ST_37: tmp_90 (217)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43 (grouped into LUT with out node tmp_94)
+._crit_edge53:14  %tmp_90 = or i1 %notrhs2, %notlhs2
+
+ST_37: notlhs3 (218)  [1/1] 2.94ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+._crit_edge53:15  %notlhs3 = icmp ne i11 %tmp_88, -1
+
+ST_37: notrhs3 (219)  [1/1] 3.63ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43
+._crit_edge53:16  %notrhs3 = icmp eq i52 %tmp_152, 0
+
+ST_37: tmp_91 (220)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43 (grouped into LUT with out node tmp_94)
+._crit_edge53:17  %tmp_91 = or i1 %notrhs3, %notlhs3
+
+ST_37: tmp_92 (221)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43 (grouped into LUT with out node tmp_94)
+._crit_edge53:18  %tmp_92 = and i1 %tmp_90, %tmp_91
+
+ST_37: tmp_94 (223)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43 (out node of the LUT)
+._crit_edge53:20  %tmp_94 = and i1 %tmp_92, %tmp_93
+
+ST_37: max_value_5 (224)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:43 (out node of the LUT)
+._crit_edge53:21  %max_value_5 = select i1 %tmp_94, double %max_value_7, double %max_value_4
+
+ST_37: StgValue_368 (225)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:42
+._crit_edge53:22  br label %.preheader45
+
+
+ <State 38>: 3.31ns
+ST_38: i (243)  [1/1] 0.00ns
+.preheader44:0  %i = phi i5 [ %i_1, %.preheader44.loopexit ], [ 0, %.preheader44.preheader ]
+
+ST_38: exitcond19 (244)  [1/1] 3.31ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:55
+.preheader44:1  %exitcond19 = icmp eq i5 %i, -16
+
+ST_38: empty_14 (245)  [1/1] 0.00ns
+.preheader44:2  %empty_14 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_38: i_1 (246)  [1/1] 2.33ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:55
+.preheader44:3  %i_1 = add i5 %i, 1
+
+ST_38: StgValue_373 (247)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:55
+.preheader44:4  br i1 %exitcond19, label %.preheader39.preheader, label %.preheader43.preheader
+
+ST_38: tmp_20 (249)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:66
+.preheader43.preheader:0  %tmp_20 = call i64 @_ssdm_op_BitConcatenate.i64.i59.i5(i59 1, i5 %i)
+
+ST_38: conv_bias_addr_1 (250)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:66
+.preheader43.preheader:1  %conv_bias_addr_1 = getelementptr [48 x double]* @conv_bias, i64 0, i64 %tmp_20
+
+ST_38: conv_bias_load_1 (257)  [2/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:66
+.preheader43.preheader:8  %conv_bias_load_1 = load double* %conv_bias_addr_1, align 8
+
+ST_38: max_value_1 (371)  [1/1] 0.00ns
+.preheader39.preheader:0  %max_value_1 = alloca double
+
+ST_38: StgValue_378 (372)  [1/1] 1.59ns
+.preheader39.preheader:1  store double %max_value_load, double* %max_value_1
+
+ST_38: StgValue_379 (373)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:76
+.preheader39.preheader:2  br label %.preheader39
+
+
+ <State 39>: 3.79ns
+ST_39: p_shl6 (251)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:58
+.preheader43.preheader:2  %p_shl6 = call i64 @_ssdm_op_BitConcatenate.i64.i54.i5.i5(i54 1, i5 %i, i5 0)
+
+ST_39: p_shl7 (252)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:58
+.preheader43.preheader:3  %p_shl7 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i5.i2(i57 1, i5 %i, i2 0)
+
+ST_39: tmp_24 (253)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:58
+.preheader43.preheader:4  %tmp_24 = sub i64 %p_shl6, %p_shl7
+
+ST_39: p_shl10 (254)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+.preheader43.preheader:5  %p_shl10 = call i64 @_ssdm_op_BitConcatenate.i64.i56.i5.i3(i56 1, i5 %i, i3 0)
+
+ST_39: p_shl11 (255)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+.preheader43.preheader:6  %p_shl11 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i5.i1(i58 1, i5 %i, i1 false)
+
+ST_39: tmp_25 (256)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+.preheader43.preheader:7  %tmp_25 = sub i64 %p_shl10, %p_shl11
+
+ST_39: conv_bias_load_1 (257)  [1/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:66
+.preheader43.preheader:8  %conv_bias_load_1 = load double* %conv_bias_addr_1, align 8
+
+ST_39: StgValue_387 (258)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:56
+.preheader43.preheader:9  br label %.preheader43
+
+
+ <State 40>: 6.22ns
+ST_40: col6 (260)  [1/1] 0.00ns
+.preheader43:0  %col6 = phi i4 [ 0, %.preheader43.preheader ], [ %col_3, %.preheader43.loopexit ]
+
+ST_40: exitcond18 (261)  [1/1] 3.10ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:56
+.preheader43:1  %exitcond18 = icmp eq i4 %col6, -6
+
+ST_40: empty_15 (262)  [1/1] 0.00ns
+.preheader43:2  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind
+
+ST_40: col_3 (263)  [1/1] 2.35ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:56
+.preheader43:3  %col_3 = add i4 %col6, 1
+
+ST_40: StgValue_392 (264)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:56
+.preheader43:4  br i1 %exitcond18, label %.preheader44.loopexit, label %.preheader42.preheader
+
+ST_40: tmp_10 (266)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:58
+.preheader42.preheader:0  %tmp_10 = zext i4 %col6 to i64
+
+ST_40: tmp_82 (267)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:58
+.preheader42.preheader:1  %tmp_82 = add i64 %tmp_24, %tmp_10
+
+ST_40: tmp_87 (268)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:58
+.preheader42.preheader:2  %tmp_87 = trunc i64 %tmp_82 to i12
+
+ST_40: p_shl22_cast (269)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:58
+.preheader42.preheader:3  %p_shl22_cast = call i17 @_ssdm_op_BitConcatenate.i17.i12.i5(i12 %tmp_87, i5 0)
+
+ST_40: tmp_89 (270)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:58
+.preheader42.preheader:4  %tmp_89 = trunc i64 %tmp_82 to i15
+
+ST_40: p_shl23_cast (271)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:58
+.preheader42.preheader:5  %p_shl23_cast = call i17 @_ssdm_op_BitConcatenate.i17.i15.i2(i15 %tmp_89, i2 0)
+
+ST_40: tmp_96 (272)  [1/1] 2.43ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:58
+.preheader42.preheader:6  %tmp_96 = sub i17 %p_shl22_cast, %p_shl23_cast
+
+ST_40: StgValue_400 (273)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:57
+.preheader42.preheader:7  br label %.preheader42
+
+ST_40: StgValue_401 (369)  [1/1] 0.00ns
+.preheader44.loopexit:0  br label %.preheader44
+
+
+ <State 41>: 3.10ns
+ST_41: row7 (275)  [1/1] 0.00ns
+.preheader42:0  %row7 = phi i4 [ %row_3, %._crit_edge54 ], [ 0, %.preheader42.preheader ]
+
+ST_41: exitcond17 (276)  [1/1] 3.10ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:57
+.preheader42:1  %exitcond17 = icmp eq i4 %row7, -6
+
+ST_41: empty_16 (277)  [1/1] 0.00ns
+.preheader42:2  %empty_16 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind
+
+ST_41: row_3 (278)  [1/1] 2.35ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:57
+.preheader42:3  %row_3 = add i4 %row7, 1
+
+ST_41: StgValue_406 (279)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:57
+.preheader42:4  br i1 %exitcond17, label %.preheader43.loopexit, label %4
+
+ST_41: tmp_24_cast (281)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:58
+:0  %tmp_24_cast = zext i4 %row7 to i17
+
+ST_41: tmp_129 (282)  [1/1] 2.43ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:58
+:1  %tmp_129 = add i17 %tmp_96, %tmp_24_cast
+
+ST_41: tmp_153_cast (283)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:58
+:2  %tmp_153_cast = zext i17 %tmp_129 to i64
+
+ST_41: conv_dot_addr_2 (284)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:58
+:3  %conv_dot_addr_2 = getelementptr [37632 x double]* @conv_dot, i64 0, i64 %tmp_153_cast
+
+ST_41: StgValue_411 (285)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:59
+:4  br label %.loopexit56
+
+ST_41: StgValue_412 (367)  [1/1] 0.00ns
+.preheader43.loopexit:0  br label %.preheader43
+
+
+ <State 42>: 8.23ns
+ST_42: tmp_31 (287)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+.loopexit56:0  %tmp_31 = phi double [ 0.000000e+00, %4 ], [ %tmp_50, %.loopexit56.loopexit ]
+
+ST_42: fil_col8 (288)  [1/1] 0.00ns
+.loopexit56:1  %fil_col8 = phi i3 [ 0, %4 ], [ %fil_col_3, %.loopexit56.loopexit ]
+
+ST_42: fil_col8_cast (289)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:59
+.loopexit56:2  %fil_col8_cast = zext i3 %fil_col8 to i4
+
+ST_42: exitcond16 (290)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:59
+.loopexit56:3  %exitcond16 = icmp eq i3 %fil_col8, -3
+
+ST_42: empty_17 (291)  [1/1] 0.00ns
+.loopexit56:4  %empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind
+
+ST_42: fil_col_3 (292)  [1/1] 2.26ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:59
+.loopexit56:5  %fil_col_3 = add i3 %fil_col8, 1
+
+ST_42: StgValue_419 (293)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:59
+.loopexit56:6  br i1 %exitcond16, label %._crit_edge54, label %.preheader41.preheader
+
+ST_42: tmp_40 (295)  [1/1] 2.35ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+.preheader41.preheader:0  %tmp_40 = add i4 %fil_col8_cast, %col6
+
+ST_42: tmp_41 (296)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+.preheader41.preheader:1  %tmp_41 = zext i4 %tmp_40 to i64
+
+ST_42: tmp_42_cast (297)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:60
+.preheader41.preheader:2  %tmp_42_cast = zext i3 %fil_col8 to i14
+
+ST_42: StgValue_423 (298)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:60
+.preheader41.preheader:3  br label %.preheader41
+
+ST_42: tmp_38 (354)  [5/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:66
+._crit_edge54:0  %tmp_38 = fadd double %tmp_31, %conv_bias_load_1
+
+
+ <State 43>: 2.35ns
+ST_43: tmp_50 (300)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+.preheader41:0  %tmp_50 = phi double [ %tmp_31, %.preheader41.preheader ], [ %tmp_68, %.preheader41.loopexit ]
+
+ST_43: fil_row9 (301)  [1/1] 0.00ns
+.preheader41:1  %fil_row9 = phi i3 [ 0, %.preheader41.preheader ], [ %fil_row_3, %.preheader41.loopexit ]
+
+ST_43: fil_row9_cast (302)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:60
+.preheader41:2  %fil_row9_cast = zext i3 %fil_row9 to i4
+
+ST_43: exitcond15 (303)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:60
+.preheader41:3  %exitcond15 = icmp eq i3 %fil_row9, -3
+
+ST_43: empty_18 (304)  [1/1] 0.00ns
+.preheader41:4  %empty_18 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind
+
+ST_43: fil_row_3 (305)  [1/1] 2.26ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:60
+.preheader41:5  %fil_row_3 = add i3 %fil_row9, 1
+
+ST_43: StgValue_431 (306)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:60
+.preheader41:6  br i1 %exitcond15, label %.loopexit56.loopexit, label %.preheader40.preheader
+
+ST_43: tmp_64 (308)  [1/1] 2.35ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+.preheader40.preheader:0  %tmp_64 = add i4 %fil_row9_cast, %row7
+
+ST_43: tmp_65_cast (309)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+.preheader40.preheader:1  %tmp_65_cast = zext i4 %tmp_64 to i15
+
+ST_43: tmp_66 (310)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+.preheader40.preheader:2  %tmp_66 = zext i3 %fil_row9 to i64
+
+ST_43: StgValue_435 (311)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:61
+.preheader40.preheader:3  br label %.preheader40
+
+ST_43: StgValue_436 (352)  [1/1] 0.00ns
+.loopexit56.loopexit:0  br label %.loopexit56
+
+
+ <State 44>: 5.31ns
+ST_44: tmp_68 (313)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+.preheader40:0  %tmp_68 = phi double [ %tmp_80, %5 ], [ %tmp_50, %.preheader40.preheader ]
+
+ST_44: n (314)  [1/1] 0.00ns
+.preheader40:1  %n = phi i3 [ %n_1, %5 ], [ 0, %.preheader40.preheader ]
+
+ST_44: exitcond14 (315)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:61
+.preheader40:2  %exitcond14 = icmp eq i3 %n, -2
+
+ST_44: empty_19 (316)  [1/1] 0.00ns
+.preheader40:3  %empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6) nounwind
+
+ST_44: n_1 (317)  [1/1] 2.26ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:61
+.preheader40:4  %n_1 = add i3 %n, 1
+
+ST_44: StgValue_442 (318)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:61
+.preheader40:5  br i1 %exitcond14, label %.preheader41.loopexit, label %5
+
+ST_44: tmp_78 (320)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:0  %tmp_78 = zext i3 %n to i64
+
+ST_44: p_shl18 (321)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:1  %p_shl18 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i3.i4(i57 2, i3 %n, i4 0)
+
+ST_44: p_shl19 (322)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:2  %p_shl19 = call i64 @_ssdm_op_BitConcatenate.i64.i60.i3.i1(i60 2, i3 %n, i1 false)
+
+ST_44: tmp_176 (323)  [1/1] 2.65ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:3  %tmp_176 = sub i64 %p_shl18, %p_shl19
+
+ST_44: tmp_177 (324)  [1/1] 2.65ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:4  %tmp_177 = add i64 %tmp_176, %tmp_41
+
+ST_44: tmp_178 (325)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:5  %tmp_178 = trunc i64 %tmp_177 to i11
+
+ST_44: tmp_179 (327)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:7  %tmp_179 = trunc i64 %tmp_177 to i14
+
+ST_44: tmp_182 (333)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:13  %tmp_182 = add i64 %tmp_25, %tmp_78
+
+ST_44: StgValue_451 (350)  [1/1] 0.00ns
+.preheader41.loopexit:0  br label %.preheader41
+
+
+ <State 45>: 5.31ns
+ST_45: p_shl26_cast (326)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:6  %p_shl26_cast = call i15 @_ssdm_op_BitConcatenate.i15.i11.i4(i11 %tmp_178, i4 0)
+
+ST_45: p_shl27_cast (328)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:8  %p_shl27_cast = call i15 @_ssdm_op_BitConcatenate.i15.i14.i1(i14 %tmp_179, i1 false)
+
+ST_45: tmp_180 (329)  [1/1] 1.94ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:9  %tmp_180 = sub i15 %p_shl26_cast, %p_shl27_cast
+
+ST_45: tmp_181 (330)  [1/1] 1.94ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:10  %tmp_181 = add i15 %tmp_180, %tmp_65_cast
+
+ST_45: tmp_183 (334)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:14  %tmp_183 = shl i64 %tmp_182, 2
+
+ST_45: tmp_184 (335)  [1/1] 2.65ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:15  %tmp_184 = add i64 %tmp_182, %tmp_183
+
+ST_45: tmp_185 (336)  [1/1] 2.65ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:16  %tmp_185 = add i64 %tmp_184, %tmp_66
+
+ST_45: tmp_186 (337)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:17  %tmp_186 = trunc i64 %tmp_185 to i14
+
+ST_45: tmp_187 (338)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:18  %tmp_187 = trunc i64 %tmp_185 to i12
+
+
+ <State 46>: 7.10ns
+ST_46: tmp_198_cast (331)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:11  %tmp_198_cast = zext i15 %tmp_181 to i64
+
+ST_46: pool_dot_addr_3 (332)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:12  %pool_dot_addr_3 = getelementptr [9408 x double]* @pool_dot, i64 0, i64 %tmp_198_cast
+
+ST_46: p_shl24_cast (339)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:19  %p_shl24_cast = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_187, i2 0)
+
+ST_46: tmp_188 (340)  [1/1] 1.92ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:20  %tmp_188 = add i14 %tmp_186, %p_shl24_cast
+
+ST_46: tmp_189 (341)  [1/1] 1.92ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:21  %tmp_189 = add i14 %tmp_188, %tmp_42_cast
+
+ST_46: tmp_205_cast (342)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:22  %tmp_205_cast = zext i14 %tmp_189 to i64
+
+ST_46: conv_weight_addr_1 (343)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:23  %conv_weight_addr_1 = getelementptr [7200 x double]* @conv_weight, i64 0, i64 %tmp_205_cast
+
+ST_46: pool_dot_load_1 (344)  [2/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:24  %pool_dot_load_1 = load double* %pool_dot_addr_3, align 8
+
+ST_46: conv_weight_load_1 (345)  [2/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:25  %conv_weight_load_1 = load double* %conv_weight_addr_1, align 8
+
+
+ <State 47>: 3.25ns
+ST_47: pool_dot_load_1 (344)  [1/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:24  %pool_dot_load_1 = load double* %pool_dot_addr_3, align 8
+
+ST_47: conv_weight_load_1 (345)  [1/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:25  %conv_weight_load_1 = load double* %conv_weight_addr_1, align 8
+
+
+ <State 48>: 7.79ns
+ST_48: tmp_79 (346)  [6/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:26  %tmp_79 = fmul double %pool_dot_load_1, %conv_weight_load_1
+
+
+ <State 49>: 7.79ns
+ST_49: tmp_79 (346)  [5/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:26  %tmp_79 = fmul double %pool_dot_load_1, %conv_weight_load_1
+
+
+ <State 50>: 7.79ns
+ST_50: tmp_79 (346)  [4/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:26  %tmp_79 = fmul double %pool_dot_load_1, %conv_weight_load_1
+
+
+ <State 51>: 7.79ns
+ST_51: tmp_79 (346)  [3/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:26  %tmp_79 = fmul double %pool_dot_load_1, %conv_weight_load_1
+
+
+ <State 52>: 7.79ns
+ST_52: tmp_79 (346)  [2/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:26  %tmp_79 = fmul double %pool_dot_load_1, %conv_weight_load_1
+
+
+ <State 53>: 7.79ns
+ST_53: tmp_79 (346)  [1/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:26  %tmp_79 = fmul double %pool_dot_load_1, %conv_weight_load_1
+
+
+ <State 54>: 8.23ns
+ST_54: tmp_80 (347)  [5/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:27  %tmp_80 = fadd double %tmp_68, %tmp_79
+
+
+ <State 55>: 8.23ns
+ST_55: tmp_80 (347)  [4/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:27  %tmp_80 = fadd double %tmp_68, %tmp_79
+
+
+ <State 56>: 8.23ns
+ST_56: tmp_80 (347)  [3/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:27  %tmp_80 = fadd double %tmp_68, %tmp_79
+
+
+ <State 57>: 8.23ns
+ST_57: tmp_80 (347)  [2/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:27  %tmp_80 = fadd double %tmp_68, %tmp_79
+
+
+ <State 58>: 8.23ns
+ST_58: tmp_80 (347)  [1/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:62
+:27  %tmp_80 = fadd double %tmp_68, %tmp_79
+
+ST_58: StgValue_483 (348)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:61
+:28  br label %.preheader40
+
+
+ <State 59>: 8.23ns
+ST_59: tmp_38 (354)  [4/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:66
+._crit_edge54:0  %tmp_38 = fadd double %tmp_31, %conv_bias_load_1
+
+
+ <State 60>: 8.23ns
+ST_60: tmp_38 (354)  [3/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:66
+._crit_edge54:0  %tmp_38 = fadd double %tmp_31, %conv_bias_load_1
+
+
+ <State 61>: 8.23ns
+ST_61: tmp_38 (354)  [2/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:66
+._crit_edge54:0  %tmp_38 = fadd double %tmp_31, %conv_bias_load_1
+
+
+ <State 62>: 8.23ns
+ST_62: tmp_38 (354)  [1/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:66
+._crit_edge54:0  %tmp_38 = fadd double %tmp_31, %conv_bias_load_1
+
+
+ <State 63>: 6.82ns
+ST_63: tmp_38_to_int (355)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:66
+._crit_edge54:1  %tmp_38_to_int = bitcast double %tmp_38 to i64
+
+ST_63: tmp_77 (356)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:66
+._crit_edge54:2  %tmp_77 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %tmp_38_to_int, i32 52, i32 62)
+
+ST_63: tmp_149 (357)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:66
+._crit_edge54:3  %tmp_149 = trunc i64 %tmp_38_to_int to i52
+
+ST_63: notlhs1 (358)  [1/1] 2.94ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:66
+._crit_edge54:4  %notlhs1 = icmp ne i11 %tmp_77, -1
+
+ST_63: notrhs1 (359)  [1/1] 3.63ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:66
+._crit_edge54:5  %notrhs1 = icmp eq i52 %tmp_149, 0
+
+ST_63: tmp_84 (361)  [1/1] 6.82ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:68
+._crit_edge54:7  %tmp_84 = fcmp olt double %tmp_38, 0.000000e+00
+
+
+ <State 64>: 5.32ns
+ST_64: tmp_83 (360)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:66 (grouped into LUT with out node storemerge1)
+._crit_edge54:6  %tmp_83 = or i1 %notrhs1, %notlhs1
+
+ST_64: tmp_85 (362)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:68 (grouped into LUT with out node storemerge1)
+._crit_edge54:8  %tmp_85 = and i1 %tmp_83, %tmp_84
+
+ST_64: storemerge1 (363)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:68 (out node of the LUT)
+._crit_edge54:9  %storemerge1 = select i1 %tmp_85, double 0.000000e+00, double %tmp_38
+
+ST_64: StgValue_497 (364)  [1/1] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:66
+._crit_edge54:10  store double %storemerge1, double* %conv_dot_addr_2, align 8
+
+ST_64: StgValue_498 (365)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:57
+._crit_edge54:11  br label %.preheader42
+
+
+ <State 65>: 3.79ns
+ST_65: i1 (375)  [1/1] 0.00ns
+.preheader39:0  %i1 = phi i5 [ 0, %.preheader39.preheader ], [ %i_2, %.preheader39.loopexit ]
+
+ST_65: max_value_1_load (376)  [1/1] 0.00ns
+.preheader39:1  %max_value_1_load = load double* %max_value_1
+
+ST_65: exitcond13 (377)  [1/1] 3.31ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:76
+.preheader39:2  %exitcond13 = icmp eq i5 %i1, -16
+
+ST_65: empty_20 (378)  [1/1] 0.00ns
+.preheader39:3  %empty_20 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_65: i_2 (379)  [1/1] 2.33ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:76
+.preheader39:4  %i_2 = add i5 %i1, 1
+
+ST_65: StgValue_504 (380)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:76
+.preheader39:5  br i1 %exitcond13, label %.preheader35.preheader, label %.preheader38.preheader
+
+ST_65: p_shl12 (382)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:87
+.preheader38.preheader:0  %p_shl12 = call i64 @_ssdm_op_BitConcatenate.i64.i55.i5.i4(i55 1, i5 %i1, i4 0)
+
+ST_65: p_shl13 (383)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:87
+.preheader38.preheader:1  %p_shl13 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i5.i1(i58 1, i5 %i1, i1 false)
+
+ST_65: tmp_65 (384)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:87
+.preheader38.preheader:2  %tmp_65 = sub i64 %p_shl12, %p_shl13
+
+ST_65: p_shl14 (385)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:79
+.preheader38.preheader:3  %p_shl14 = call i64 @_ssdm_op_BitConcatenate.i64.i54.i5.i5(i54 1, i5 %i1, i5 0)
+
+ST_65: p_shl15 (386)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:79
+.preheader38.preheader:4  %p_shl15 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i5.i2(i57 1, i5 %i1, i2 0)
+
+ST_65: tmp_76 (387)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:79
+.preheader38.preheader:5  %tmp_76 = sub i64 %p_shl14, %p_shl15
+
+ST_65: StgValue_511 (388)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:77
+.preheader38.preheader:6  br label %.preheader38
+
+ST_65: StgValue_512 (491)  [1/1] 1.59ns
+.preheader35.preheader:0  br label %.preheader35
+
+
+ <State 66>: 6.22ns
+ST_66: j (390)  [1/1] 0.00ns
+.preheader38:0  %j = phi i3 [ 0, %.preheader38.preheader ], [ %j_1, %.preheader38.loopexit ]
+
+ST_66: exitcond12 (391)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:77
+.preheader38:1  %exitcond12 = icmp eq i3 %j, -3
+
+ST_66: empty_21 (392)  [1/1] 0.00ns
+.preheader38:2  %empty_21 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind
+
+ST_66: j_1 (393)  [1/1] 2.26ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:77
+.preheader38:3  %j_1 = add i3 %j, 1
+
+ST_66: StgValue_517 (394)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:77
+.preheader38:4  br i1 %exitcond12, label %.preheader39.loopexit, label %.preheader37.preheader
+
+ST_66: tmp_21 (396)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:79
+.preheader37.preheader:0  %tmp_21 = call i4 @_ssdm_op_BitConcatenate.i4.i3.i1(i3 %j, i1 false)
+
+ST_66: tmp_22 (397)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:79
+.preheader37.preheader:1  %tmp_22 = zext i4 %tmp_21 to i64
+
+ST_66: tmp_115 (398)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:79
+.preheader37.preheader:2  %tmp_115 = add i64 %tmp_22, %tmp_76
+
+ST_66: tmp_117 (399)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:79
+.preheader37.preheader:3  %tmp_117 = trunc i64 %tmp_115 to i12
+
+ST_66: p_shl36_cast (400)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:79
+.preheader37.preheader:4  %p_shl36_cast = call i17 @_ssdm_op_BitConcatenate.i17.i12.i5(i12 %tmp_117, i5 0)
+
+ST_66: tmp_123 (401)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:79
+.preheader37.preheader:5  %tmp_123 = trunc i64 %tmp_115 to i15
+
+ST_66: p_shl37_cast (402)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:79
+.preheader37.preheader:6  %p_shl37_cast = call i17 @_ssdm_op_BitConcatenate.i17.i15.i2(i15 %tmp_123, i2 0)
+
+ST_66: tmp_124 (403)  [1/1] 2.43ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:79
+.preheader37.preheader:7  %tmp_124 = sub i17 %p_shl36_cast, %p_shl37_cast
+
+ST_66: tmp_23 (404)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:87
+.preheader37.preheader:8  %tmp_23 = zext i3 %j to i64
+
+ST_66: tmp_125 (405)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:87
+.preheader37.preheader:9  %tmp_125 = add i64 %tmp_23, %tmp_65
+
+ST_66: tmp_126 (406)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:87
+.preheader37.preheader:10  %tmp_126 = trunc i64 %tmp_125 to i11
+
+ST_66: p_shl34_cast (407)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:87
+.preheader37.preheader:11  %p_shl34_cast = call i15 @_ssdm_op_BitConcatenate.i15.i11.i4(i11 %tmp_126, i4 0)
+
+ST_66: tmp_127 (408)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:87
+.preheader37.preheader:12  %tmp_127 = trunc i64 %tmp_125 to i14
+
+ST_66: p_shl35_cast (409)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:87
+.preheader37.preheader:13  %p_shl35_cast = call i15 @_ssdm_op_BitConcatenate.i15.i14.i1(i14 %tmp_127, i1 false)
+
+ST_66: tmp_128 (410)  [1/1] 2.35ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:87
+.preheader37.preheader:14  %tmp_128 = sub i15 %p_shl34_cast, %p_shl35_cast
+
+ST_66: StgValue_533 (411)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:78
+.preheader37.preheader:15  br label %.preheader37
+
+ST_66: StgValue_534 (489)  [1/1] 0.00ns
+.preheader39.loopexit:0  br label %.preheader39
+
+
+ <State 67>: 5.68ns
+ST_67: k (413)  [1/1] 0.00ns
+.preheader37:0  %k = phi i3 [ %k_2, %7 ], [ 0, %.preheader37.preheader ]
+
+ST_67: exitcond11 (414)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:78
+.preheader37:1  %exitcond11 = icmp eq i3 %k, -3
+
+ST_67: empty_22 (415)  [1/1] 0.00ns
+.preheader37:2  %empty_22 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind
+
+ST_67: k_2 (416)  [1/1] 2.26ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:78
+.preheader37:3  %k_2 = add i3 %k, 1
+
+ST_67: StgValue_539 (417)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:78
+.preheader37:4  br i1 %exitcond11, label %.preheader38.loopexit, label %6
+
+ST_67: tmp_36 (419)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:79
+:0  %tmp_36 = call i4 @_ssdm_op_BitConcatenate.i4.i3.i1(i3 %k, i1 false)
+
+ST_67: tmp_37_cast (420)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:79
+:1  %tmp_37_cast = zext i4 %tmp_36 to i17
+
+ST_67: tmp_148 (421)  [1/1] 2.43ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:79
+:2  %tmp_148 = add i17 %tmp_37_cast, %tmp_124
+
+ST_67: tmp_172_cast (422)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:79
+:3  %tmp_172_cast = zext i17 %tmp_148 to i64
+
+ST_67: conv_dot_addr_3 (423)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:79
+:4  %conv_dot_addr_3 = getelementptr [37632 x double]* @conv_dot, i64 0, i64 %tmp_172_cast
+
+ST_67: max_value_6 (424)  [2/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:79
+:5  %max_value_6 = load double* %conv_dot_addr_3, align 8
+
+ST_67: StgValue_546 (487)  [1/1] 0.00ns
+.preheader38.loopexit:0  br label %.preheader38
+
+
+ <State 68>: 4.84ns
+ST_68: max_value_6 (424)  [1/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:79
+:5  %max_value_6 = load double* %conv_dot_addr_3, align 8
+
+ST_68: StgValue_548 (425)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:80
+:6  br label %.loopexit
+
+
+ <State 69>: 8.57ns
+ST_69: l (427)  [1/1] 0.00ns
+.loopexit:0  %l = phi i2 [ 0, %6 ], [ %l_1, %.loopexit.loopexit ]
+
+ST_69: max_value_9 (428)  [1/1] 0.00ns
+.loopexit:1  %max_value_9 = phi double [ %max_value_6, %6 ], [ %max_value_8, %.loopexit.loopexit ]
+
+ST_69: l_cast (429)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:80
+.loopexit:2  %l_cast = zext i2 %l to i4
+
+ST_69: exitcond10 (430)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:80
+.loopexit:3  %exitcond10 = icmp eq i2 %l, -2
+
+ST_69: empty_23 (431)  [1/1] 0.00ns
+.loopexit:4  %empty_23 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2) nounwind
+
+ST_69: l_1 (432)  [1/1] 2.17ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:80
+.loopexit:5  %l_1 = add i2 %l, 1
+
+ST_69: StgValue_555 (433)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:80
+.loopexit:6  br i1 %exitcond10, label %7, label %.preheader36.preheader
+
+ST_69: tmp_62 (435)  [1/1] 2.35ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+.preheader36.preheader:0  %tmp_62 = add i4 %l_cast, %tmp_21
+
+ST_69: tmp_63 (436)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+.preheader36.preheader:1  %tmp_63 = zext i4 %tmp_62 to i64
+
+ST_69: tmp_162 (437)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+.preheader36.preheader:2  %tmp_162 = add i64 %tmp_76, %tmp_63
+
+ST_69: tmp_163 (438)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+.preheader36.preheader:3  %tmp_163 = trunc i64 %tmp_162 to i12
+
+ST_69: p_shl38_cast (439)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+.preheader36.preheader:4  %p_shl38_cast = call i17 @_ssdm_op_BitConcatenate.i17.i12.i5(i12 %tmp_163, i5 0)
+
+ST_69: tmp_164 (440)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+.preheader36.preheader:5  %tmp_164 = trunc i64 %tmp_162 to i15
+
+ST_69: p_shl39_cast (441)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+.preheader36.preheader:6  %p_shl39_cast = call i17 @_ssdm_op_BitConcatenate.i17.i15.i2(i15 %tmp_164, i2 0)
+
+ST_69: tmp_165 (442)  [1/1] 2.43ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+.preheader36.preheader:7  %tmp_165 = sub i17 %p_shl38_cast, %p_shl39_cast
+
+ST_69: StgValue_564 (443)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:81
+.preheader36.preheader:8  br label %.preheader36
+
+ST_69: tmp_61_cast (479)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:87
+:0  %tmp_61_cast = zext i3 %k to i15
+
+ST_69: tmp_161 (480)  [1/1] 2.35ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:87
+:1  %tmp_161 = add i15 %tmp_128, %tmp_61_cast
+
+ST_69: tmp_181_cast (481)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:87
+:2  %tmp_181_cast = zext i15 %tmp_161 to i64
+
+ST_69: pool_dot_addr_2 (482)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:87
+:3  %pool_dot_addr_2 = getelementptr [9408 x double]* @pool_dot, i64 0, i64 %tmp_181_cast
+
+ST_69: StgValue_569 (483)  [1/1] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:87
+:4  store double %max_value_9, double* %pool_dot_addr_2, align 8
+
+ST_69: StgValue_570 (484)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:79
+:5  store double %max_value_9, double* %max_value_1
+
+ST_69: StgValue_571 (485)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:78
+:6  br label %.preheader37
+
+
+ <State 70>: 8.03ns
+ST_70: m (445)  [1/1] 0.00ns
+.preheader36:0  %m = phi i2 [ %m_1, %._crit_edge55 ], [ 0, %.preheader36.preheader ]
+
+ST_70: max_value_8 (446)  [1/1] 0.00ns
+.preheader36:1  %max_value_8 = phi double [ %max_value_11, %._crit_edge55 ], [ %max_value_9, %.preheader36.preheader ]
+
+ST_70: m_cast (447)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:81
+.preheader36:2  %m_cast = zext i2 %m to i4
+
+ST_70: exitcond9 (448)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:81
+.preheader36:3  %exitcond9 = icmp eq i2 %m, -2
+
+ST_70: empty_24 (449)  [1/1] 0.00ns
+.preheader36:4  %empty_24 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2) nounwind
+
+ST_70: m_1 (450)  [1/1] 2.17ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:81
+.preheader36:5  %m_1 = add i2 %m, 1
+
+ST_70: StgValue_578 (451)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:81
+.preheader36:6  br i1 %exitcond9, label %.loopexit.loopexit, label %._crit_edge55
+
+ST_70: tmp_75 (453)  [1/1] 2.35ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+._crit_edge55:0  %tmp_75 = add i4 %m_cast, %tmp_36
+
+ST_70: tmp_76_cast (454)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+._crit_edge55:1  %tmp_76_cast = zext i4 %tmp_75 to i17
+
+ST_70: tmp_173 (455)  [1/1] 2.43ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+._crit_edge55:2  %tmp_173 = add i17 %tmp_165, %tmp_76_cast
+
+ST_70: tmp_192_cast (456)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+._crit_edge55:3  %tmp_192_cast = zext i17 %tmp_173 to i64
+
+ST_70: conv_dot_addr_5 (457)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+._crit_edge55:4  %conv_dot_addr_5 = getelementptr [37632 x double]* @conv_dot, i64 0, i64 %tmp_192_cast
+
+ST_70: max_value_10 (458)  [2/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+._crit_edge55:5  %max_value_10 = load double* %conv_dot_addr_5, align 8
+
+ST_70: StgValue_585 (477)  [1/1] 0.00ns
+.loopexit.loopexit:0  br label %.loopexit
+
+
+ <State 71>: 3.25ns
+ST_71: max_value_10 (458)  [1/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+._crit_edge55:5  %max_value_10 = load double* %conv_dot_addr_5, align 8
+
+
+ <State 72>: 6.82ns
+ST_72: tmp_112 (472)  [1/1] 6.82ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+._crit_edge55:19  %tmp_112 = fcmp olt double %max_value_8, %max_value_10
+
+
+ <State 73>: 7.77ns
+ST_73: max_value_10_to_int (459)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+._crit_edge55:6  %max_value_10_to_int = bitcast double %max_value_8 to i64
+
+ST_73: tmp_105 (460)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+._crit_edge55:7  %tmp_105 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %max_value_10_to_int, i32 52, i32 62)
+
+ST_73: tmp_174 (461)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+._crit_edge55:8  %tmp_174 = trunc i64 %max_value_10_to_int to i52
+
+ST_73: max_value_18_to_int (462)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+._crit_edge55:9  %max_value_18_to_int = bitcast double %max_value_10 to i64
+
+ST_73: tmp_107 (463)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+._crit_edge55:10  %tmp_107 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %max_value_18_to_int, i32 52, i32 62)
+
+ST_73: tmp_175 (464)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+._crit_edge55:11  %tmp_175 = trunc i64 %max_value_18_to_int to i52
+
+ST_73: notlhs6 (465)  [1/1] 2.94ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+._crit_edge55:12  %notlhs6 = icmp ne i11 %tmp_105, -1
+
+ST_73: notrhs6 (466)  [1/1] 3.63ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+._crit_edge55:13  %notrhs6 = icmp eq i52 %tmp_174, 0
+
+ST_73: tmp_109 (467)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82 (grouped into LUT with out node tmp_113)
+._crit_edge55:14  %tmp_109 = or i1 %notrhs6, %notlhs6
+
+ST_73: notlhs7 (468)  [1/1] 2.94ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+._crit_edge55:15  %notlhs7 = icmp ne i11 %tmp_107, -1
+
+ST_73: notrhs7 (469)  [1/1] 3.63ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82
+._crit_edge55:16  %notrhs7 = icmp eq i52 %tmp_175, 0
+
+ST_73: tmp_110 (470)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82 (grouped into LUT with out node tmp_113)
+._crit_edge55:17  %tmp_110 = or i1 %notrhs7, %notlhs7
+
+ST_73: tmp_111 (471)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82 (grouped into LUT with out node tmp_113)
+._crit_edge55:18  %tmp_111 = and i1 %tmp_109, %tmp_110
+
+ST_73: tmp_113 (473)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82 (out node of the LUT)
+._crit_edge55:20  %tmp_113 = and i1 %tmp_111, %tmp_112
+
+ST_73: max_value_11 (474)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:82 (out node of the LUT)
+._crit_edge55:21  %max_value_11 = select i1 %tmp_113, double %max_value_10, double %max_value_8
+
+ST_73: StgValue_603 (475)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:81
+._crit_edge55:22  br label %.preheader36
+
+
+ <State 74>: 3.79ns
+ST_74: i2 (493)  [1/1] 0.00ns
+.preheader35:0  %i2 = phi i5 [ %i_3, %.preheader35.loopexit ], [ 0, %.preheader35.preheader ]
+
+ST_74: phi_mul (494)  [1/1] 0.00ns
+.preheader35:1  %phi_mul = phi i9 [ %next_mul, %.preheader35.loopexit ], [ 0, %.preheader35.preheader ]
+
+ST_74: next_mul (495)  [1/1] 2.32ns
+.preheader35:2  %next_mul = add i9 %phi_mul, 25
+
+ST_74: exitcond8 (496)  [1/1] 3.31ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:94
+.preheader35:3  %exitcond8 = icmp eq i5 %i2, -16
+
+ST_74: empty_25 (497)  [1/1] 0.00ns
+.preheader35:4  %empty_25 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_74: i_3 (498)  [1/1] 2.33ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:94
+.preheader35:5  %i_3 = add i5 %i2, 1
+
+ST_74: StgValue_610 (499)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:94
+.preheader35:6  br i1 %exitcond8, label %.preheader32.preheader, label %.preheader34.preheader
+
+ST_74: p_shl16 (501)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+.preheader34.preheader:0  %p_shl16 = call i64 @_ssdm_op_BitConcatenate.i64.i55.i5.i4(i55 1, i5 %i2, i4 0)
+
+ST_74: p_shl17 (502)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+.preheader34.preheader:1  %p_shl17 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i5.i1(i58 1, i5 %i2, i1 false)
+
+ST_74: tmp_108 (503)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+.preheader34.preheader:2  %tmp_108 = sub i64 %p_shl16, %p_shl17
+
+ST_74: StgValue_614 (504)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:95
+.preheader34.preheader:3  br label %.preheader34
+
+ST_74: StgValue_615 (548)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:103
+.preheader32.preheader:0  br label %.preheader32
+
+
+ <State 75>: 6.15ns
+ST_75: j1 (506)  [1/1] 0.00ns
+.preheader34:0  %j1 = phi i3 [ 0, %.preheader34.preheader ], [ %j_2, %.preheader34.loopexit ]
+
+ST_75: j1_cast (507)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:95
+.preheader34:1  %j1_cast = zext i3 %j1 to i5
+
+ST_75: exitcond7 (508)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:95
+.preheader34:2  %exitcond7 = icmp eq i3 %j1, -3
+
+ST_75: empty_26 (509)  [1/1] 0.00ns
+.preheader34:3  %empty_26 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind
+
+ST_75: j_2 (510)  [1/1] 2.26ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:95
+.preheader34:4  %j_2 = add i3 %j1, 1
+
+ST_75: StgValue_621 (511)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:95
+.preheader34:5  br i1 %exitcond7, label %.preheader35.loopexit, label %.preheader33.preheader
+
+ST_75: tmp_34 (513)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+.preheader33.preheader:0  %tmp_34 = zext i3 %j1 to i64
+
+ST_75: tmp_144 (514)  [1/1] 3.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+.preheader33.preheader:1  %tmp_144 = add i64 %tmp_34, %tmp_108
+
+ST_75: tmp_145 (515)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+.preheader33.preheader:2  %tmp_145 = trunc i64 %tmp_144 to i11
+
+ST_75: p_shl42_cast (516)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+.preheader33.preheader:3  %p_shl42_cast = call i15 @_ssdm_op_BitConcatenate.i15.i11.i4(i11 %tmp_145, i4 0)
+
+ST_75: tmp_146 (517)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+.preheader33.preheader:4  %tmp_146 = trunc i64 %tmp_144 to i14
+
+ST_75: p_shl43_cast (518)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+.preheader33.preheader:5  %p_shl43_cast = call i15 @_ssdm_op_BitConcatenate.i15.i14.i1(i14 %tmp_146, i1 false)
+
+ST_75: tmp_147 (519)  [1/1] 2.35ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+.preheader33.preheader:6  %tmp_147 = sub i15 %p_shl42_cast, %p_shl43_cast
+
+ST_75: p_shl (520)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+.preheader33.preheader:7  %p_shl = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %j1, i2 0)
+
+ST_75: tmp8 (521)  [1/1] 2.33ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+.preheader33.preheader:8  %tmp8 = add i5 %p_shl, %j1_cast
+
+ST_75: tmp8_cast (522)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+.preheader33.preheader:9  %tmp8_cast = zext i5 %tmp8 to i9
+
+ST_75: StgValue_632 (523)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:96
+.preheader33.preheader:10  br label %.preheader33
+
+ST_75: StgValue_633 (546)  [1/1] 0.00ns
+.preheader35.loopexit:0  br label %.preheader35
+
+
+ <State 76>: 5.61ns
+ST_76: k1 (525)  [1/1] 0.00ns
+.preheader33:0  %k1 = phi i3 [ %k_1, %8 ], [ 0, %.preheader33.preheader ]
+
+ST_76: k1_cast (526)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:96
+.preheader33:1  %k1_cast = zext i3 %k1 to i9
+
+ST_76: exitcond6 (527)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:96
+.preheader33:2  %exitcond6 = icmp eq i3 %k1, -3
+
+ST_76: empty_27 (528)  [1/1] 0.00ns
+.preheader33:3  %empty_27 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind
+
+ST_76: k_1 (529)  [1/1] 2.26ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:96
+.preheader33:4  %k_1 = add i3 %k1, 1
+
+ST_76: StgValue_639 (530)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:96
+.preheader33:5  br i1 %exitcond6, label %.preheader34.loopexit, label %8
+
+ST_76: tmp_57_cast (532)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+:0  %tmp_57_cast = zext i3 %k1 to i15
+
+ST_76: tmp_160 (533)  [1/1] 2.35ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+:1  %tmp_160 = add i15 %tmp_147, %tmp_57_cast
+
+ST_76: tmp_180_cast (534)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+:2  %tmp_180_cast = zext i15 %tmp_160 to i64
+
+ST_76: pool_dot_addr_1 (535)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+:3  %pool_dot_addr_1 = getelementptr [9408 x double]* @pool_dot, i64 0, i64 %tmp_180_cast
+
+ST_76: pool_dot_load (536)  [2/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+:4  %pool_dot_load = load double* %pool_dot_addr_1, align 8
+
+ST_76: tmp9 (537)  [1/1] 1.85ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+:5  %tmp9 = add i9 %k1_cast, %phi_mul
+
+ST_76: tmp_59 (538)  [1/1] 1.85ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+:6  %tmp_59 = add i9 %tmp8_cast, %tmp9
+
+ST_76: StgValue_647 (544)  [1/1] 0.00ns
+.preheader34.loopexit:0  br label %.preheader34
+
+
+ <State 77>: 6.51ns
+ST_77: pool_dot_load (536)  [1/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+:4  %pool_dot_load = load double* %pool_dot_addr_1, align 8
+
+ST_77: tmp_60 (539)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+:7  %tmp_60 = zext i9 %tmp_59 to i64
+
+ST_77: fc_in_addr_1 (540)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+:8  %fc_in_addr_1 = getelementptr inbounds [400 x double]* @fc_in, i64 0, i64 %tmp_60
+
+ST_77: StgValue_651 (541)  [1/1] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:97
+:9  store double %pool_dot_load, double* %fc_in_addr_1, align 8
+
+ST_77: StgValue_652 (542)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:96
+:10  br label %.preheader33
+
+
+ <State 78>: 2.91ns
+ST_78: col4 (550)  [1/1] 0.00ns
+.preheader32:0  %col4 = phi i7 [ %col_4, %._crit_edge56 ], [ 0, %.preheader32.preheader ]
+
+ST_78: exitcond5 (551)  [1/1] 2.91ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:103
+.preheader32:1  %exitcond5 = icmp eq i7 %col4, -8
+
+ST_78: empty_28 (552)  [1/1] 0.00ns
+.preheader32:2  %empty_28 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 120, i64 120, i64 120) nounwind
+
+ST_78: col_4 (553)  [1/1] 2.32ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:103
+.preheader32:3  %col_4 = add i7 %col4, 1
+
+ST_78: StgValue_657 (554)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:103
+.preheader32:4  br i1 %exitcond5, label %.preheader31.preheader, label %9
+
+ST_78: tmp_32 (556)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:104
+:0  %tmp_32 = zext i7 %col4 to i64
+
+ST_78: tmp_32_cast1 (557)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:108
+:1  %tmp_32_cast1 = zext i7 %col4 to i17
+
+ST_78: tmp_32_cast (558)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:108
+:2  %tmp_32_cast = zext i7 %col4 to i8
+
+ST_78: tmp_143 (559)  [1/1] 2.32ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:108
+:3  %tmp_143 = add i8 %tmp_32_cast, 120
+
+ST_78: tmp_167_cast (560)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:108
+:4  %tmp_167_cast = zext i8 %tmp_143 to i64
+
+ST_78: fc_bias_addr (561)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:108
+:5  %fc_bias_addr = getelementptr [480 x double]* @fc_bias, i64 0, i64 %tmp_167_cast
+
+ST_78: fc_dot_addr (562)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:104
+:6  %fc_dot_addr = getelementptr inbounds [3 x [120 x double]]* @fc_dot, i64 0, i64 1, i64 %tmp_32
+
+ST_78: StgValue_665 (563)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:105
+:7  br label %10
+
+ST_78: StgValue_666 (603)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:116
+.preheader31.preheader:0  br label %.preheader31
+
+
+ <State 79>: 6.32ns
+ST_79: tmp_46 (565)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:0  %tmp_46 = phi double [ 0.000000e+00, %9 ], [ %tmp_54, %11 ]
+
+ST_79: row4 (566)  [1/1] 0.00ns
+:1  %row4 = phi i9 [ 0, %9 ], [ %row_4, %11 ]
+
+ST_79: exitcond4 (567)  [1/1] 3.02ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:105
+:2  %exitcond4 = icmp eq i9 %row4, -112
+
+ST_79: empty_29 (568)  [1/1] 0.00ns
+:3  %empty_29 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 400, i64 400, i64 400) nounwind
+
+ST_79: row_4 (569)  [1/1] 2.32ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:105
+:4  %row_4 = add i9 %row4, 1
+
+ST_79: StgValue_672 (570)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:105
+:5  br i1 %exitcond4, label %._crit_edge56, label %11
+
+ST_79: tmp_155 (573)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:105
+:1  %tmp_155 = call i16 @_ssdm_op_BitConcatenate.i16.i9.i7(i9 %row4, i7 0)
+
+ST_79: p_shl44_cast (574)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:105
+:2  %p_shl44_cast = zext i16 %tmp_155 to i17
+
+ST_79: tmp_156 (575)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:105
+:3  %tmp_156 = call i12 @_ssdm_op_BitConcatenate.i12.i9.i3(i9 %row4, i3 0)
+
+ST_79: p_shl45_cast (576)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:4  %p_shl45_cast = zext i12 %tmp_156 to i17
+
+ST_79: tmp_157 (577)  [1/1] 2.39ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:5  %tmp_157 = sub i17 %p_shl44_cast, %p_shl45_cast
+
+ST_79: tmp_158 (578)  [1/1] 1.97ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:6  %tmp_158 = add i17 %tmp_157, 48000
+
+ST_79: tmp_159 (579)  [1/1] 1.97ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:7  %tmp_159 = add i17 %tmp_158, %tmp_32_cast1
+
+ST_79: fc_bias_load (589)  [2/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:108
+._crit_edge56:0  %fc_bias_load = load double* %fc_bias_addr, align 8
+
+
+ <State 80>: 3.25ns
+ST_80: tmp_52 (572)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:0  %tmp_52 = zext i9 %row4 to i64
+
+ST_80: tmp_179_cast (580)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:8  %tmp_179_cast = zext i17 %tmp_159 to i64
+
+ST_80: fc_weight_addr (581)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:9  %fc_weight_addr = getelementptr [192000 x double]* @fc_weight, i64 0, i64 %tmp_179_cast
+
+ST_80: fc_in_addr (582)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:10  %fc_in_addr = getelementptr inbounds [400 x double]* @fc_in, i64 0, i64 %tmp_52
+
+ST_80: fc_in_load (583)  [2/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:11  %fc_in_load = load double* %fc_in_addr, align 8
+
+ST_80: fc_weight_load (584)  [2/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:12  %fc_weight_load = load double* %fc_weight_addr, align 8
+
+
+ <State 81>: 3.25ns
+ST_81: fc_in_load (583)  [1/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:11  %fc_in_load = load double* %fc_in_addr, align 8
+
+ST_81: fc_weight_load (584)  [1/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:12  %fc_weight_load = load double* %fc_weight_addr, align 8
+
+
+ <State 82>: 7.79ns
+ST_82: tmp_53 (585)  [6/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:13  %tmp_53 = fmul double %fc_in_load, %fc_weight_load
+
+
+ <State 83>: 7.79ns
+ST_83: tmp_53 (585)  [5/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:13  %tmp_53 = fmul double %fc_in_load, %fc_weight_load
+
+
+ <State 84>: 7.79ns
+ST_84: tmp_53 (585)  [4/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:13  %tmp_53 = fmul double %fc_in_load, %fc_weight_load
+
+
+ <State 85>: 7.79ns
+ST_85: tmp_53 (585)  [3/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:13  %tmp_53 = fmul double %fc_in_load, %fc_weight_load
+
+
+ <State 86>: 7.79ns
+ST_86: tmp_53 (585)  [2/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:13  %tmp_53 = fmul double %fc_in_load, %fc_weight_load
+
+
+ <State 87>: 7.79ns
+ST_87: tmp_53 (585)  [1/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:13  %tmp_53 = fmul double %fc_in_load, %fc_weight_load
+
+
+ <State 88>: 8.23ns
+ST_88: tmp_54 (586)  [5/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:14  %tmp_54 = fadd double %tmp_46, %tmp_53
+
+
+ <State 89>: 8.23ns
+ST_89: tmp_54 (586)  [4/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:14  %tmp_54 = fadd double %tmp_46, %tmp_53
+
+
+ <State 90>: 8.23ns
+ST_90: tmp_54 (586)  [3/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:14  %tmp_54 = fadd double %tmp_46, %tmp_53
+
+
+ <State 91>: 8.23ns
+ST_91: tmp_54 (586)  [2/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:14  %tmp_54 = fadd double %tmp_46, %tmp_53
+
+
+ <State 92>: 8.23ns
+ST_92: tmp_54 (586)  [1/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:106
+:14  %tmp_54 = fadd double %tmp_46, %tmp_53
+
+ST_92: StgValue_700 (587)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:105
+:15  br label %10
+
+
+ <State 93>: 3.25ns
+ST_93: fc_bias_load (589)  [1/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:108
+._crit_edge56:0  %fc_bias_load = load double* %fc_bias_addr, align 8
+
+
+ <State 94>: 8.23ns
+ST_94: tmp_49 (590)  [5/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:108
+._crit_edge56:1  %tmp_49 = fadd double %tmp_46, %fc_bias_load
+
+
+ <State 95>: 8.23ns
+ST_95: tmp_49 (590)  [4/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:108
+._crit_edge56:1  %tmp_49 = fadd double %tmp_46, %fc_bias_load
+
+
+ <State 96>: 8.23ns
+ST_96: tmp_49 (590)  [3/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:108
+._crit_edge56:1  %tmp_49 = fadd double %tmp_46, %fc_bias_load
+
+
+ <State 97>: 8.23ns
+ST_97: tmp_49 (590)  [2/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:108
+._crit_edge56:1  %tmp_49 = fadd double %tmp_46, %fc_bias_load
+
+
+ <State 98>: 8.23ns
+ST_98: tmp_49 (590)  [1/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:108
+._crit_edge56:1  %tmp_49 = fadd double %tmp_46, %fc_bias_load
+
+
+ <State 99>: 6.82ns
+ST_99: tmp_98 (597)  [1/1] 6.82ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:110
+._crit_edge56:8  %tmp_98 = fcmp olt double %tmp_49, 0.000000e+00
+
+
+ <State 100>: 8.02ns
+ST_100: tmp_49_to_int (591)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:108
+._crit_edge56:2  %tmp_49_to_int = bitcast double %tmp_49 to i64
+
+ST_100: tmp_95 (592)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:108
+._crit_edge56:3  %tmp_95 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %tmp_49_to_int, i32 52, i32 62)
+
+ST_100: tmp_154 (593)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:108
+._crit_edge56:4  %tmp_154 = trunc i64 %tmp_49_to_int to i52
+
+ST_100: notlhs4 (594)  [1/1] 2.94ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:108
+._crit_edge56:5  %notlhs4 = icmp ne i11 %tmp_95, -1
+
+ST_100: notrhs4 (595)  [1/1] 3.63ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:108
+._crit_edge56:6  %notrhs4 = icmp eq i52 %tmp_154, 0
+
+ST_100: tmp_97 (596)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:108 (grouped into LUT with out node storemerge2)
+._crit_edge56:7  %tmp_97 = or i1 %notrhs4, %notlhs4
+
+ST_100: tmp_99 (598)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:110 (grouped into LUT with out node storemerge2)
+._crit_edge56:9  %tmp_99 = and i1 %tmp_97, %tmp_98
+
+ST_100: storemerge2 (599)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:110 (out node of the LUT)
+._crit_edge56:10  %storemerge2 = select i1 %tmp_99, double 0.000000e+00, double %tmp_49
+
+ST_100: StgValue_716 (600)  [1/1] 2.32ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:108
+._crit_edge56:11  store double %storemerge2, double* %fc_dot_addr, align 8
+
+ST_100: StgValue_717 (601)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:103
+._crit_edge56:12  br label %.preheader32
+
+
+ <State 101>: 2.91ns
+ST_101: i4 (605)  [1/1] 0.00ns
+.preheader31:0  %i4 = phi i7 [ %i_4, %._crit_edge57 ], [ 0, %.preheader31.preheader ]
+
+ST_101: exitcond3 (606)  [1/1] 2.91ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:116
+.preheader31:1  %exitcond3 = icmp eq i7 %i4, -44
+
+ST_101: empty_30 (607)  [1/1] 0.00ns
+.preheader31:2  %empty_30 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 84, i64 84, i64 84) nounwind
+
+ST_101: i_4 (608)  [1/1] 2.32ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:116
+.preheader31:3  %i_4 = add i7 %i4, 1
+
+ST_101: StgValue_722 (609)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:116
+.preheader31:4  br i1 %exitcond3, label %.preheader.preheader, label %12
+
+ST_101: tmp_33 (611)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:117
+:0  %tmp_33 = zext i7 %i4 to i64
+
+ST_101: tmp_33_cast1 (612)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:121
+:1  %tmp_33_cast1 = zext i7 %i4 to i17
+
+ST_101: tmp_33_cast (613)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:121
+:2  %tmp_33_cast = zext i7 %i4 to i9
+
+ST_101: tmp_153 (614)  [1/1] 2.32ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:121
+:3  %tmp_153 = add i9 %tmp_33_cast, 240
+
+ST_101: tmp_174_cast (615)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:121
+:4  %tmp_174_cast = zext i9 %tmp_153 to i64
+
+ST_101: fc_bias_addr_1 (616)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:121
+:5  %fc_bias_addr_1 = getelementptr [480 x double]* @fc_bias, i64 0, i64 %tmp_174_cast
+
+ST_101: fc_dot_addr_1 (617)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:117
+:6  %fc_dot_addr_1 = getelementptr inbounds [3 x [120 x double]]* @fc_dot, i64 0, i64 2, i64 %tmp_33
+
+ST_101: StgValue_730 (618)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:118
+:7  br label %13
+
+ST_101: StgValue_731 (660)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:129
+.preheader.preheader:0  br label %.preheader
+
+
+ <State 102>: 6.28ns
+ST_102: storemerge4 (620)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:0  %storemerge4 = phi double [ 0.000000e+00, %12 ], [ %tmp_71, %14 ]
+
+ST_102: j3 (621)  [1/1] 0.00ns
+:1  %j3 = phi i7 [ 0, %12 ], [ %j_3, %14 ]
+
+ST_102: StgValue_734 (622)  [1/1] 2.32ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:2  store double %storemerge4, double* %fc_dot_addr_1, align 8
+
+ST_102: exitcond2 (623)  [1/1] 2.91ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:118
+:3  %exitcond2 = icmp eq i7 %j3, -8
+
+ST_102: empty_31 (624)  [1/1] 0.00ns
+:4  %empty_31 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 120, i64 120, i64 120) nounwind
+
+ST_102: j_3 (625)  [1/1] 2.32ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:118
+:5  %j_3 = add i7 %j3, 1
+
+ST_102: StgValue_738 (626)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:118
+:6  br i1 %exitcond2, label %._crit_edge57, label %14
+
+ST_102: tmp_168 (629)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:118
+:1  %tmp_168 = call i14 @_ssdm_op_BitConcatenate.i14.i7.i7(i7 %j3, i7 0)
+
+ST_102: p_shl46_cast (630)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:118
+:2  %p_shl46_cast = zext i14 %tmp_168 to i15
+
+ST_102: tmp_169 (631)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:118
+:3  %tmp_169 = call i10 @_ssdm_op_BitConcatenate.i10.i7.i3(i7 %j3, i3 0)
+
+ST_102: p_shl47_cast (632)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:4  %p_shl47_cast = zext i10 %tmp_169 to i15
+
+ST_102: tmp_170 (633)  [1/1] 2.34ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:5  %tmp_170 = sub i15 %p_shl46_cast, %p_shl47_cast
+
+ST_102: tmp_189_cast (634)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:6  %tmp_189_cast = sext i15 %tmp_170 to i17
+
+ST_102: tmp_171 (635)  [1/1] 1.97ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:7  %tmp_171 = add i17 %tmp_189_cast, -35072
+
+ST_102: tmp_172 (636)  [1/1] 1.97ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:8  %tmp_172 = add i17 %tmp_171, %tmp_33_cast1
+
+ST_102: fc_bias_load_1 (646)  [2/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:121
+._crit_edge57:0  %fc_bias_load_1 = load double* %fc_bias_addr_1, align 8
+
+
+ <State 103>: 3.25ns
+ST_103: tmp_69 (628)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:0  %tmp_69 = zext i7 %j3 to i64
+
+ST_103: tmp_191_cast (637)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:9  %tmp_191_cast = zext i17 %tmp_172 to i64
+
+ST_103: fc_weight_addr_1 (638)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:10  %fc_weight_addr_1 = getelementptr [192000 x double]* @fc_weight, i64 0, i64 %tmp_191_cast
+
+ST_103: fc_dot_addr_3 (639)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:11  %fc_dot_addr_3 = getelementptr inbounds [3 x [120 x double]]* @fc_dot, i64 0, i64 1, i64 %tmp_69
+
+ST_103: fc_dot_load (640)  [2/2] 2.32ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:12  %fc_dot_load = load double* %fc_dot_addr_3, align 8
+
+ST_103: fc_weight_load_1 (641)  [2/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:13  %fc_weight_load_1 = load double* %fc_weight_addr_1, align 8
+
+
+ <State 104>: 3.25ns
+ST_104: fc_dot_load (640)  [1/2] 2.32ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:12  %fc_dot_load = load double* %fc_dot_addr_3, align 8
+
+ST_104: fc_weight_load_1 (641)  [1/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:13  %fc_weight_load_1 = load double* %fc_weight_addr_1, align 8
+
+
+ <State 105>: 7.79ns
+ST_105: tmp_70 (642)  [6/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:14  %tmp_70 = fmul double %fc_dot_load, %fc_weight_load_1
+
+
+ <State 106>: 7.79ns
+ST_106: tmp_70 (642)  [5/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:14  %tmp_70 = fmul double %fc_dot_load, %fc_weight_load_1
+
+
+ <State 107>: 7.79ns
+ST_107: tmp_70 (642)  [4/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:14  %tmp_70 = fmul double %fc_dot_load, %fc_weight_load_1
+
+
+ <State 108>: 7.79ns
+ST_108: tmp_70 (642)  [3/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:14  %tmp_70 = fmul double %fc_dot_load, %fc_weight_load_1
+
+
+ <State 109>: 7.79ns
+ST_109: tmp_70 (642)  [2/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:14  %tmp_70 = fmul double %fc_dot_load, %fc_weight_load_1
+
+
+ <State 110>: 7.79ns
+ST_110: tmp_70 (642)  [1/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:14  %tmp_70 = fmul double %fc_dot_load, %fc_weight_load_1
+
+
+ <State 111>: 8.23ns
+ST_111: tmp_71 (643)  [5/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:15  %tmp_71 = fadd double %storemerge4, %tmp_70
+
+
+ <State 112>: 8.23ns
+ST_112: tmp_71 (643)  [4/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:15  %tmp_71 = fadd double %storemerge4, %tmp_70
+
+
+ <State 113>: 8.23ns
+ST_113: tmp_71 (643)  [3/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:15  %tmp_71 = fadd double %storemerge4, %tmp_70
+
+
+ <State 114>: 8.23ns
+ST_114: tmp_71 (643)  [2/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:15  %tmp_71 = fadd double %storemerge4, %tmp_70
+
+
+ <State 115>: 8.23ns
+ST_115: tmp_71 (643)  [1/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:119
+:15  %tmp_71 = fadd double %storemerge4, %tmp_70
+
+ST_115: StgValue_767 (644)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:118
+:16  br label %13
+
+
+ <State 116>: 3.25ns
+ST_116: fc_bias_load_1 (646)  [1/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:121
+._crit_edge57:0  %fc_bias_load_1 = load double* %fc_bias_addr_1, align 8
+
+
+ <State 117>: 8.23ns
+ST_117: tmp_56 (647)  [5/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:121
+._crit_edge57:1  %tmp_56 = fadd double %storemerge4, %fc_bias_load_1
+
+
+ <State 118>: 8.23ns
+ST_118: tmp_56 (647)  [4/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:121
+._crit_edge57:1  %tmp_56 = fadd double %storemerge4, %fc_bias_load_1
+
+
+ <State 119>: 8.23ns
+ST_119: tmp_56 (647)  [3/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:121
+._crit_edge57:1  %tmp_56 = fadd double %storemerge4, %fc_bias_load_1
+
+
+ <State 120>: 8.23ns
+ST_120: tmp_56 (647)  [2/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:121
+._crit_edge57:1  %tmp_56 = fadd double %storemerge4, %fc_bias_load_1
+
+
+ <State 121>: 8.23ns
+ST_121: tmp_56 (647)  [1/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:121
+._crit_edge57:1  %tmp_56 = fadd double %storemerge4, %fc_bias_load_1
+
+
+ <State 122>: 6.82ns
+ST_122: tmp_103 (654)  [1/1] 6.82ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:123
+._crit_edge57:8  %tmp_103 = fcmp olt double %tmp_56, 0.000000e+00
+
+
+ <State 123>: 8.02ns
+ST_123: tmp_56_to_int (648)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:121
+._crit_edge57:2  %tmp_56_to_int = bitcast double %tmp_56 to i64
+
+ST_123: tmp_100 (649)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:121
+._crit_edge57:3  %tmp_100 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %tmp_56_to_int, i32 52, i32 62)
+
+ST_123: tmp_167 (650)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:121
+._crit_edge57:4  %tmp_167 = trunc i64 %tmp_56_to_int to i52
+
+ST_123: notlhs5 (651)  [1/1] 2.94ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:121
+._crit_edge57:5  %notlhs5 = icmp ne i11 %tmp_100, -1
+
+ST_123: notrhs5 (652)  [1/1] 3.63ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:121
+._crit_edge57:6  %notrhs5 = icmp eq i52 %tmp_167, 0
+
+ST_123: tmp_102 (653)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:121 (grouped into LUT with out node storemerge3)
+._crit_edge57:7  %tmp_102 = or i1 %notrhs5, %notlhs5
+
+ST_123: tmp_104 (655)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:123 (grouped into LUT with out node storemerge3)
+._crit_edge57:9  %tmp_104 = and i1 %tmp_102, %tmp_103
+
+ST_123: storemerge3 (656)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:123 (out node of the LUT)
+._crit_edge57:10  %storemerge3 = select i1 %tmp_104, double 0.000000e+00, double %tmp_56
+
+ST_123: StgValue_783 (657)  [1/1] 2.32ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:121
+._crit_edge57:11  store double %storemerge3, double* %fc_dot_addr_1, align 8
+
+ST_123: StgValue_784 (658)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:116
+._crit_edge57:12  br label %.preheader31
+
+
+ <State 124>: 3.10ns
+ST_124: max_index_1 (662)  [1/1] 0.00ns
+.preheader:0  %max_index_1 = phi i4 [ %i_5, %_ifconv ], [ 0, %.preheader.preheader ]
+
+ST_124: max_index (663)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:139
+.preheader:1  %max_index = phi i32 [ %max_index_2, %_ifconv ], [ undef, %.preheader.preheader ]
+
+ST_124: max_value_s (664)  [1/1] 0.00ns
+.preheader:2  %max_value_s = phi double [ %max_value_12, %_ifconv ], [ %max_value_1_load, %.preheader.preheader ]
+
+ST_124: max_index_1_cast (665)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:129
+.preheader:3  %max_index_1_cast = zext i4 %max_index_1 to i32
+
+ST_124: exitcond1 (666)  [1/1] 3.10ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:129
+.preheader:4  %exitcond1 = icmp eq i4 %max_index_1, -6
+
+ST_124: empty_32 (667)  [1/1] 0.00ns
+.preheader:5  %empty_32 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind
+
+ST_124: i_5 (668)  [1/1] 2.35ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:129
+.preheader:6  %i_5 = add i4 %max_index_1, 1
+
+ST_124: StgValue_792 (669)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:129
+.preheader:7  br i1 %exitcond1, label %18, label %15
+
+ST_124: tmp_47 (671)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:130
+:0  %tmp_47 = zext i4 %max_index_1 to i64
+
+ST_124: tmp_47_cast1 (672)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134
+:1  %tmp_47_cast1 = zext i4 %max_index_1 to i18
+
+ST_124: tmp_47_cast (673)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134
+:2  %tmp_47_cast = zext i4 %max_index_1 to i9
+
+ST_124: tmp_166 (674)  [1/1] 2.32ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134
+:3  %tmp_166 = add i9 %tmp_47_cast, -152
+
+ST_124: tmp_186_cast (675)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134
+:4  %tmp_186_cast = zext i9 %tmp_166 to i64
+
+ST_124: fc_bias_addr_2 (676)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134
+:5  %fc_bias_addr_2 = getelementptr [480 x double]* @fc_bias, i64 0, i64 %tmp_186_cast
+
+ST_124: fc_dot_addr_2 (677)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:130
+:6  %fc_dot_addr_2 = getelementptr inbounds [3 x [120 x double]]* @fc_dot, i64 1, i64 0, i64 %tmp_47
+
+ST_124: StgValue_800 (678)  [1/1] 1.59ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:131
+:7  br label %16
+
+ST_124: StgValue_801 (734)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:145
+:0  ret i32 %max_index
+
+
+ <State 125>: 6.31ns
+ST_125: storemerge5 (680)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:0  %storemerge5 = phi double [ 0.000000e+00, %15 ], [ %tmp_81, %17 ]
+
+ST_125: j4 (681)  [1/1] 0.00ns
+:1  %j4 = phi i7 [ 0, %15 ], [ %j_4, %17 ]
+
+ST_125: StgValue_804 (682)  [1/1] 2.32ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:2  store double %storemerge5, double* %fc_dot_addr_2, align 8
+
+ST_125: exitcond (683)  [1/1] 2.91ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:131
+:3  %exitcond = icmp eq i7 %j4, -44
+
+ST_125: empty_33 (684)  [1/1] 0.00ns
+:4  %empty_33 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 84, i64 84, i64 84) nounwind
+
+ST_125: j_4 (685)  [1/1] 2.32ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:131
+:5  %j_4 = add i7 %j4, 1
+
+ST_125: StgValue_808 (686)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:131
+:6  br i1 %exitcond, label %_ifconv, label %17
+
+ST_125: tmp_192 (689)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:131
+:1  %tmp_192 = call i14 @_ssdm_op_BitConcatenate.i14.i7.i7(i7 %j4, i7 0)
+
+ST_125: p_shl48_cast (690)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:131
+:2  %p_shl48_cast = zext i14 %tmp_192 to i15
+
+ST_125: tmp_193 (691)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:131
+:3  %tmp_193 = call i10 @_ssdm_op_BitConcatenate.i10.i7.i3(i7 %j4, i3 0)
+
+ST_125: p_shl49_cast (692)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:4  %p_shl49_cast = zext i10 %tmp_193 to i15
+
+ST_125: tmp_194 (693)  [1/1] 2.34ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:5  %tmp_194 = sub i15 %p_shl48_cast, %p_shl49_cast
+
+ST_125: tmp_208_cast (694)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:6  %tmp_208_cast = sext i15 %tmp_194 to i18
+
+ST_125: tmp_195 (695)  [1/1] 1.98ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:7  %tmp_195 = add i18 %tmp_208_cast, -118144
+
+ST_125: tmp_196 (696)  [1/1] 1.98ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:8  %tmp_196 = add i18 %tmp_195, %tmp_47_cast1
+
+ST_125: fc_bias_load_2 (706)  [2/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134
+_ifconv:0  %fc_bias_load_2 = load double* %fc_bias_addr_2, align 8
+
+ST_125: tmp_72 (709)  [1/1] 3.10ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:135
+_ifconv:3  %tmp_72 = icmp eq i4 %max_index_1, 0
+
+
+ <State 126>: 3.25ns
+ST_126: tmp_73 (688)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:0  %tmp_73 = zext i7 %j4 to i64
+
+ST_126: tmp_210_cast (697)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:9  %tmp_210_cast = zext i18 %tmp_196 to i64
+
+ST_126: fc_weight_addr_2 (698)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:10  %fc_weight_addr_2 = getelementptr [192000 x double]* @fc_weight, i64 0, i64 %tmp_210_cast
+
+ST_126: fc_dot_addr_4 (699)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:11  %fc_dot_addr_4 = getelementptr inbounds [3 x [120 x double]]* @fc_dot, i64 0, i64 2, i64 %tmp_73
+
+ST_126: fc_dot_load_1 (700)  [2/2] 2.32ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:12  %fc_dot_load_1 = load double* %fc_dot_addr_4, align 8
+
+ST_126: fc_weight_load_2 (701)  [2/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:13  %fc_weight_load_2 = load double* %fc_weight_addr_2, align 8
+
+
+ <State 127>: 3.25ns
+ST_127: fc_dot_load_1 (700)  [1/2] 2.32ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:12  %fc_dot_load_1 = load double* %fc_dot_addr_4, align 8
+
+ST_127: fc_weight_load_2 (701)  [1/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:13  %fc_weight_load_2 = load double* %fc_weight_addr_2, align 8
+
+
+ <State 128>: 7.79ns
+ST_128: tmp_74 (702)  [6/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:14  %tmp_74 = fmul double %fc_dot_load_1, %fc_weight_load_2
+
+
+ <State 129>: 7.79ns
+ST_129: tmp_74 (702)  [5/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:14  %tmp_74 = fmul double %fc_dot_load_1, %fc_weight_load_2
+
+
+ <State 130>: 7.79ns
+ST_130: tmp_74 (702)  [4/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:14  %tmp_74 = fmul double %fc_dot_load_1, %fc_weight_load_2
+
+
+ <State 131>: 7.79ns
+ST_131: tmp_74 (702)  [3/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:14  %tmp_74 = fmul double %fc_dot_load_1, %fc_weight_load_2
+
+
+ <State 132>: 7.79ns
+ST_132: tmp_74 (702)  [2/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:14  %tmp_74 = fmul double %fc_dot_load_1, %fc_weight_load_2
+
+
+ <State 133>: 7.79ns
+ST_133: tmp_74 (702)  [1/6] 7.79ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:14  %tmp_74 = fmul double %fc_dot_load_1, %fc_weight_load_2
+
+
+ <State 134>: 8.23ns
+ST_134: tmp_81 (703)  [5/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:15  %tmp_81 = fadd double %storemerge5, %tmp_74
+
+
+ <State 135>: 8.23ns
+ST_135: tmp_81 (703)  [4/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:15  %tmp_81 = fadd double %storemerge5, %tmp_74
+
+
+ <State 136>: 8.23ns
+ST_136: tmp_81 (703)  [3/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:15  %tmp_81 = fadd double %storemerge5, %tmp_74
+
+
+ <State 137>: 8.23ns
+ST_137: tmp_81 (703)  [2/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:15  %tmp_81 = fadd double %storemerge5, %tmp_74
+
+
+ <State 138>: 8.23ns
+ST_138: tmp_81 (703)  [1/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:132
+:15  %tmp_81 = fadd double %storemerge5, %tmp_74
+
+ST_138: StgValue_838 (704)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:131
+:16  br label %16
+
+
+ <State 139>: 3.25ns
+ST_139: fc_bias_load_2 (706)  [1/2] 3.25ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134
+_ifconv:0  %fc_bias_load_2 = load double* %fc_bias_addr_2, align 8
+
+
+ <State 140>: 8.23ns
+ST_140: max_value_13 (707)  [5/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134
+_ifconv:1  %max_value_13 = fadd double %storemerge5, %fc_bias_load_2
+
+
+ <State 141>: 8.23ns
+ST_141: max_value_13 (707)  [4/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134
+_ifconv:1  %max_value_13 = fadd double %storemerge5, %fc_bias_load_2
+
+
+ <State 142>: 8.23ns
+ST_142: max_value_13 (707)  [3/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134
+_ifconv:1  %max_value_13 = fadd double %storemerge5, %fc_bias_load_2
+
+
+ <State 143>: 8.23ns
+ST_143: max_value_13 (707)  [2/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134
+_ifconv:1  %max_value_13 = fadd double %storemerge5, %fc_bias_load_2
+
+
+ <State 144>: 8.23ns
+ST_144: max_value_13 (707)  [1/5] 8.23ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134
+_ifconv:1  %max_value_13 = fadd double %storemerge5, %fc_bias_load_2
+
+
+ <State 145>: 6.82ns
+ST_145: StgValue_845 (708)  [1/1] 2.32ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134
+_ifconv:2  store double %max_value_13, double* %fc_dot_addr_2, align 8
+
+ST_145: tmp_121 (724)  [1/1] 6.82ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:139
+_ifconv:18  %tmp_121 = fcmp ogt double %max_value_13, %max_value_s
+
+
+ <State 146>: 7.77ns
+ST_146: max_value_14 (710)  [2/2] 2.32ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:136
+_ifconv:4  %max_value_14 = load double* getelementptr inbounds ([3 x [120 x double]]* @fc_dot, i64 1, i64 0, i64 0), align 8
+
+ST_146: max_value_17_to_int (711)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134
+_ifconv:5  %max_value_17_to_int = bitcast double %max_value_13 to i64
+
+ST_146: tmp_114 (712)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134
+_ifconv:6  %tmp_114 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %max_value_17_to_int, i32 52, i32 62)
+
+ST_146: tmp_190 (713)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134
+_ifconv:7  %tmp_190 = trunc i64 %max_value_17_to_int to i52
+
+ST_146: max_value_to_int (714)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:139
+_ifconv:8  %max_value_to_int = bitcast double %max_value_s to i64
+
+ST_146: tmp_116 (715)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:139
+_ifconv:9  %tmp_116 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %max_value_to_int, i32 52, i32 62)
+
+ST_146: tmp_191 (716)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:139
+_ifconv:10  %tmp_191 = trunc i64 %max_value_to_int to i52
+
+ST_146: notlhs8 (717)  [1/1] 2.94ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134
+_ifconv:11  %notlhs8 = icmp ne i11 %tmp_114, -1
+
+ST_146: notrhs8 (718)  [1/1] 3.63ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134
+_ifconv:12  %notrhs8 = icmp eq i52 %tmp_190, 0
+
+ST_146: tmp_118 (719)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134 (grouped into LUT with out node sel_tmp2)
+_ifconv:13  %tmp_118 = or i1 %notrhs8, %notlhs8
+
+ST_146: notlhs9 (720)  [1/1] 2.94ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:139
+_ifconv:14  %notlhs9 = icmp ne i11 %tmp_116, -1
+
+ST_146: notrhs9 (721)  [1/1] 3.63ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:139
+_ifconv:15  %notrhs9 = icmp eq i52 %tmp_191, 0
+
+ST_146: tmp_119 (722)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:139 (grouped into LUT with out node sel_tmp2)
+_ifconv:16  %tmp_119 = or i1 %notrhs9, %notlhs9
+
+ST_146: tmp_120 (723)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:134 (grouped into LUT with out node sel_tmp2)
+_ifconv:17  %tmp_120 = and i1 %tmp_118, %tmp_119
+
+ST_146: tmp_122 (725)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:139 (grouped into LUT with out node sel_tmp2)
+_ifconv:19  %tmp_122 = and i1 %tmp_120, %tmp_121
+
+ST_146: sel_tmp (726)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:135 (grouped into LUT with out node max_index_2)
+_ifconv:20  %sel_tmp = select i1 %tmp_72, i32 0, i32 %max_index
+
+ST_146: sel_tmp1 (727)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:135 (grouped into LUT with out node sel_tmp2)
+_ifconv:21  %sel_tmp1 = xor i1 %tmp_72, true
+
+ST_146: sel_tmp2 (728)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:139 (out node of the LUT)
+_ifconv:22  %sel_tmp2 = and i1 %tmp_122, %sel_tmp1
+
+ST_146: max_index_2 (729)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:139 (out node of the LUT)
+_ifconv:23  %max_index_2 = select i1 %sel_tmp2, i32 %max_index_1_cast, i32 %sel_tmp
+
+
+ <State 147>: 4.39ns
+ST_147: max_value_14 (710)  [1/2] 2.32ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:136
+_ifconv:4  %max_value_14 = load double* getelementptr inbounds ([3 x [120 x double]]* @fc_dot, i64 1, i64 0, i64 0), align 8
+
+ST_147: max_value_15 (730)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:135 (grouped into LUT with out node max_value_12)
+_ifconv:24  %max_value_15 = select i1 %tmp_72, double %max_value_14, double %max_value_s
+
+ST_147: max_value_12 (731)  [1/1] 2.07ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:139 (out node of the LUT)
+_ifconv:25  %max_value_12 = select i1 %sel_tmp2, double %max_value_13, double %max_value_15
+
+ST_147: StgValue_869 (732)  [1/1] 0.00ns  loc: lenet5_ap2/source/lenet5_ap2.cpp:129
+_ifconv:26  br label %.preheader
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('channel') with incoming values : ('channel', lenet5_ap2/source/lenet5_ap2.cpp:16) [18]  (1.59 ns)
+
+ <State 2>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('channel') with incoming values : ('channel', lenet5_ap2/source/lenet5_ap2.cpp:16) [18]  (0 ns)
+	'getelementptr' operation ('conv_bias_addr', lenet5_ap2/source/lenet5_ap2.cpp:27) [25]  (0 ns)
+	'load' operation ('conv_bias_load', lenet5_ap2/source/lenet5_ap2.cpp:27) on array 'conv_bias' [31]  (3.25 ns)
+
+ <State 3>: 3.79ns
+The critical path consists of the following:
+	'sub' operation ('tmp_2', lenet5_ap2/source/lenet5_ap2.cpp:19) [28]  (3.79 ns)
+
+ <State 4>: 6.22ns
+The critical path consists of the following:
+	'phi' operation ('col') with incoming values : ('col', lenet5_ap2/source/lenet5_ap2.cpp:17) [34]  (0 ns)
+	'add' operation ('tmp_12', lenet5_ap2/source/lenet5_ap2.cpp:19) [41]  (3.79 ns)
+	'sub' operation ('tmp_19', lenet5_ap2/source/lenet5_ap2.cpp:19) [46]  (2.43 ns)
+
+ <State 5>: 3.31ns
+The critical path consists of the following:
+	'phi' operation ('row') with incoming values : ('row', lenet5_ap2/source/lenet5_ap2.cpp:18) [49]  (0 ns)
+	'icmp' operation ('exitcond28', lenet5_ap2/source/lenet5_ap2.cpp:18) [50]  (3.31 ns)
+
+ <State 6>: 8.23ns
+The critical path consists of the following:
+	'phi' operation ('tmp_3', lenet5_ap2/source/lenet5_ap2.cpp:23) with incoming values : ('tmp_67', lenet5_ap2/source/lenet5_ap2.cpp:23) [61]  (0 ns)
+	'dadd' operation ('tmp_13', lenet5_ap2/source/lenet5_ap2.cpp:27) [105]  (8.23 ns)
+
+ <State 7>: 8.71ns
+The critical path consists of the following:
+	'phi' operation ('fil_row') with incoming values : ('fil_row', lenet5_ap2/source/lenet5_ap2.cpp:21) [74]  (0 ns)
+	'add' operation ('tmp_28', lenet5_ap2/source/lenet5_ap2.cpp:23) [81]  (2.33 ns)
+	'mul' operation ('tmp_136', lenet5_ap2/source/lenet5_ap2.cpp:23) [84]  (3.36 ns)
+	'add' operation ('tmp_137', lenet5_ap2/source/lenet5_ap2.cpp:23) [85]  (3.02 ns)
+
+ <State 8>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('in_addr', lenet5_ap2/source/lenet5_ap2.cpp:23) [87]  (0 ns)
+	'load' operation ('in_load', lenet5_ap2/source/lenet5_ap2.cpp:23) on array 'in_r' [88]  (3.25 ns)
+
+ <State 9>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('in_load', lenet5_ap2/source/lenet5_ap2.cpp:23) on array 'in_r' [88]  (3.25 ns)
+
+ <State 10>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('in_load', lenet5_ap2/source/lenet5_ap2.cpp:23) on array 'in_r' [88]  (3.25 ns)
+
+ <State 11>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('in_load', lenet5_ap2/source/lenet5_ap2.cpp:23) on array 'in_r' [88]  (3.25 ns)
+
+ <State 12>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_58', lenet5_ap2/source/lenet5_ap2.cpp:23) [99]  (7.79 ns)
+
+ <State 13>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_58', lenet5_ap2/source/lenet5_ap2.cpp:23) [99]  (7.79 ns)
+
+ <State 14>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_58', lenet5_ap2/source/lenet5_ap2.cpp:23) [99]  (7.79 ns)
+
+ <State 15>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_58', lenet5_ap2/source/lenet5_ap2.cpp:23) [99]  (7.79 ns)
+
+ <State 16>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_58', lenet5_ap2/source/lenet5_ap2.cpp:23) [99]  (7.79 ns)
+
+ <State 17>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_58', lenet5_ap2/source/lenet5_ap2.cpp:23) [99]  (7.79 ns)
+
+ <State 18>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_67', lenet5_ap2/source/lenet5_ap2.cpp:23) [100]  (8.23 ns)
+
+ <State 19>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_67', lenet5_ap2/source/lenet5_ap2.cpp:23) [100]  (8.23 ns)
+
+ <State 20>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_67', lenet5_ap2/source/lenet5_ap2.cpp:23) [100]  (8.23 ns)
+
+ <State 21>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_67', lenet5_ap2/source/lenet5_ap2.cpp:23) [100]  (8.23 ns)
+
+ <State 22>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_67', lenet5_ap2/source/lenet5_ap2.cpp:23) [100]  (8.23 ns)
+
+ <State 23>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_13', lenet5_ap2/source/lenet5_ap2.cpp:27) [105]  (8.23 ns)
+
+ <State 24>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_13', lenet5_ap2/source/lenet5_ap2.cpp:27) [105]  (8.23 ns)
+
+ <State 25>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_13', lenet5_ap2/source/lenet5_ap2.cpp:27) [105]  (8.23 ns)
+
+ <State 26>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_13', lenet5_ap2/source/lenet5_ap2.cpp:27) [105]  (8.23 ns)
+
+ <State 27>: 6.82ns
+The critical path consists of the following:
+	'dcmp' operation ('tmp_45', lenet5_ap2/source/lenet5_ap2.cpp:29) [112]  (6.82 ns)
+
+ <State 28>: 5.32ns
+The critical path consists of the following:
+	'or' operation ('tmp_39', lenet5_ap2/source/lenet5_ap2.cpp:27) [111]  (0 ns)
+	'and' operation ('tmp_51', lenet5_ap2/source/lenet5_ap2.cpp:29) [113]  (0 ns)
+	'select' operation ('storemerge', lenet5_ap2/source/lenet5_ap2.cpp:29) [114]  (2.07 ns)
+	'store' operation (lenet5_ap2/source/lenet5_ap2.cpp:27) of variable 'storemerge', lenet5_ap2/source/lenet5_ap2.cpp:29 on array 'conv_dot' [115]  (3.25 ns)
+
+ <State 29>: 3.79ns
+The critical path consists of the following:
+	'phi' operation ('channel') with incoming values : ('channel', lenet5_ap2/source/lenet5_ap2.cpp:37) [125]  (0 ns)
+	'sub' operation ('tmp_6', lenet5_ap2/source/lenet5_ap2.cpp:48) [134]  (3.79 ns)
+
+ <State 30>: 6.22ns
+The critical path consists of the following:
+	'phi' operation ('col') with incoming values : ('col', lenet5_ap2/source/lenet5_ap2.cpp:38) [140]  (0 ns)
+	'add' operation ('tmp_29', lenet5_ap2/source/lenet5_ap2.cpp:40) [148]  (3.79 ns)
+	'sub' operation ('tmp_42', lenet5_ap2/source/lenet5_ap2.cpp:40) [153]  (2.43 ns)
+
+ <State 31>: 5.68ns
+The critical path consists of the following:
+	'phi' operation ('row') with incoming values : ('row', lenet5_ap2/source/lenet5_ap2.cpp:39) [163]  (0 ns)
+	'add' operation ('tmp_101', lenet5_ap2/source/lenet5_ap2.cpp:40) [171]  (2.43 ns)
+	'getelementptr' operation ('conv_dot_addr_1', lenet5_ap2/source/lenet5_ap2.cpp:40) [173]  (0 ns)
+	'load' operation ('max_value', lenet5_ap2/source/lenet5_ap2.cpp:40) on array 'conv_dot' [174]  (3.25 ns)
+
+ <State 32>: 4.84ns
+The critical path consists of the following:
+	'load' operation ('max_value', lenet5_ap2/source/lenet5_ap2.cpp:40) on array 'conv_dot' [174]  (3.25 ns)
+	multiplexor before 'phi' operation ('fil_col') with incoming values : ('fil_col', lenet5_ap2/source/lenet5_ap2.cpp:41) [177]  (1.59 ns)
+
+ <State 33>: 8.56ns
+The critical path consists of the following:
+	'phi' operation ('fil_col') with incoming values : ('fil_col', lenet5_ap2/source/lenet5_ap2.cpp:41) [177]  (0 ns)
+	'add' operation ('tmp_26', lenet5_ap2/source/lenet5_ap2.cpp:43) [185]  (2.33 ns)
+	'add' operation ('tmp_131', lenet5_ap2/source/lenet5_ap2.cpp:43) [187]  (3.79 ns)
+	'sub' operation ('tmp_134', lenet5_ap2/source/lenet5_ap2.cpp:43) [192]  (2.43 ns)
+
+ <State 34>: 8.02ns
+The critical path consists of the following:
+	'phi' operation ('fil_row') with incoming values : ('fil_row', lenet5_ap2/source/lenet5_ap2.cpp:42) [195]  (0 ns)
+	'add' operation ('tmp_43', lenet5_ap2/source/lenet5_ap2.cpp:43) [203]  (2.33 ns)
+	'add' operation ('tmp_150', lenet5_ap2/source/lenet5_ap2.cpp:43) [205]  (2.43 ns)
+	'getelementptr' operation ('conv_dot_addr_4', lenet5_ap2/source/lenet5_ap2.cpp:43) [207]  (0 ns)
+	'load' operation ('max_value', lenet5_ap2/source/lenet5_ap2.cpp:43) on array 'conv_dot' [208]  (3.25 ns)
+
+ <State 35>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('max_value', lenet5_ap2/source/lenet5_ap2.cpp:43) on array 'conv_dot' [208]  (3.25 ns)
+
+ <State 36>: 6.82ns
+The critical path consists of the following:
+	'dcmp' operation ('tmp_93', lenet5_ap2/source/lenet5_ap2.cpp:43) [222]  (6.82 ns)
+
+ <State 37>: 7.77ns
+The critical path consists of the following:
+	'icmp' operation ('notrhs2', lenet5_ap2/source/lenet5_ap2.cpp:43) [216]  (3.63 ns)
+	'or' operation ('tmp_90', lenet5_ap2/source/lenet5_ap2.cpp:43) [217]  (0 ns)
+	'and' operation ('tmp_92', lenet5_ap2/source/lenet5_ap2.cpp:43) [221]  (0 ns)
+	'and' operation ('tmp_94', lenet5_ap2/source/lenet5_ap2.cpp:43) [223]  (2.07 ns)
+	'select' operation ('max_value', lenet5_ap2/source/lenet5_ap2.cpp:43) [224]  (2.07 ns)
+
+ <State 38>: 3.31ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', lenet5_ap2/source/lenet5_ap2.cpp:55) [243]  (0 ns)
+	'icmp' operation ('exitcond19', lenet5_ap2/source/lenet5_ap2.cpp:55) [244]  (3.31 ns)
+
+ <State 39>: 3.79ns
+The critical path consists of the following:
+	'sub' operation ('tmp_24', lenet5_ap2/source/lenet5_ap2.cpp:58) [253]  (3.79 ns)
+
+ <State 40>: 6.22ns
+The critical path consists of the following:
+	'phi' operation ('col') with incoming values : ('col', lenet5_ap2/source/lenet5_ap2.cpp:56) [260]  (0 ns)
+	'add' operation ('tmp_82', lenet5_ap2/source/lenet5_ap2.cpp:58) [267]  (3.79 ns)
+	'sub' operation ('tmp_96', lenet5_ap2/source/lenet5_ap2.cpp:58) [272]  (2.43 ns)
+
+ <State 41>: 3.1ns
+The critical path consists of the following:
+	'phi' operation ('row') with incoming values : ('row', lenet5_ap2/source/lenet5_ap2.cpp:57) [275]  (0 ns)
+	'icmp' operation ('exitcond17', lenet5_ap2/source/lenet5_ap2.cpp:57) [276]  (3.1 ns)
+
+ <State 42>: 8.23ns
+The critical path consists of the following:
+	'phi' operation ('tmp_31', lenet5_ap2/source/lenet5_ap2.cpp:62) with incoming values : ('tmp_80', lenet5_ap2/source/lenet5_ap2.cpp:62) [287]  (0 ns)
+	'dadd' operation ('tmp_38', lenet5_ap2/source/lenet5_ap2.cpp:66) [354]  (8.23 ns)
+
+ <State 43>: 2.35ns
+The critical path consists of the following:
+	'phi' operation ('fil_row') with incoming values : ('fil_row', lenet5_ap2/source/lenet5_ap2.cpp:60) [301]  (0 ns)
+	'add' operation ('tmp_64', lenet5_ap2/source/lenet5_ap2.cpp:62) [308]  (2.35 ns)
+
+ <State 44>: 5.31ns
+The critical path consists of the following:
+	'phi' operation ('n') with incoming values : ('n', lenet5_ap2/source/lenet5_ap2.cpp:61) [314]  (0 ns)
+	'sub' operation ('tmp_176', lenet5_ap2/source/lenet5_ap2.cpp:62) [323]  (2.65 ns)
+	'add' operation ('tmp_177', lenet5_ap2/source/lenet5_ap2.cpp:62) [324]  (2.65 ns)
+
+ <State 45>: 5.31ns
+The critical path consists of the following:
+	'shl' operation ('tmp_183', lenet5_ap2/source/lenet5_ap2.cpp:62) [334]  (0 ns)
+	'add' operation ('tmp_184', lenet5_ap2/source/lenet5_ap2.cpp:62) [335]  (2.65 ns)
+	'add' operation ('tmp_185', lenet5_ap2/source/lenet5_ap2.cpp:62) [336]  (2.65 ns)
+
+ <State 46>: 7.1ns
+The critical path consists of the following:
+	'add' operation ('tmp_188', lenet5_ap2/source/lenet5_ap2.cpp:62) [340]  (1.92 ns)
+	'add' operation ('tmp_189', lenet5_ap2/source/lenet5_ap2.cpp:62) [341]  (1.92 ns)
+	'getelementptr' operation ('conv_weight_addr_1', lenet5_ap2/source/lenet5_ap2.cpp:62) [343]  (0 ns)
+	'load' operation ('conv_weight_load_1', lenet5_ap2/source/lenet5_ap2.cpp:62) on array 'conv_weight' [345]  (3.25 ns)
+
+ <State 47>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('pool_dot_load_1', lenet5_ap2/source/lenet5_ap2.cpp:62) on array 'pool_dot' [344]  (3.25 ns)
+
+ <State 48>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_79', lenet5_ap2/source/lenet5_ap2.cpp:62) [346]  (7.79 ns)
+
+ <State 49>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_79', lenet5_ap2/source/lenet5_ap2.cpp:62) [346]  (7.79 ns)
+
+ <State 50>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_79', lenet5_ap2/source/lenet5_ap2.cpp:62) [346]  (7.79 ns)
+
+ <State 51>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_79', lenet5_ap2/source/lenet5_ap2.cpp:62) [346]  (7.79 ns)
+
+ <State 52>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_79', lenet5_ap2/source/lenet5_ap2.cpp:62) [346]  (7.79 ns)
+
+ <State 53>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_79', lenet5_ap2/source/lenet5_ap2.cpp:62) [346]  (7.79 ns)
+
+ <State 54>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_80', lenet5_ap2/source/lenet5_ap2.cpp:62) [347]  (8.23 ns)
+
+ <State 55>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_80', lenet5_ap2/source/lenet5_ap2.cpp:62) [347]  (8.23 ns)
+
+ <State 56>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_80', lenet5_ap2/source/lenet5_ap2.cpp:62) [347]  (8.23 ns)
+
+ <State 57>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_80', lenet5_ap2/source/lenet5_ap2.cpp:62) [347]  (8.23 ns)
+
+ <State 58>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_80', lenet5_ap2/source/lenet5_ap2.cpp:62) [347]  (8.23 ns)
+
+ <State 59>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_38', lenet5_ap2/source/lenet5_ap2.cpp:66) [354]  (8.23 ns)
+
+ <State 60>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_38', lenet5_ap2/source/lenet5_ap2.cpp:66) [354]  (8.23 ns)
+
+ <State 61>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_38', lenet5_ap2/source/lenet5_ap2.cpp:66) [354]  (8.23 ns)
+
+ <State 62>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_38', lenet5_ap2/source/lenet5_ap2.cpp:66) [354]  (8.23 ns)
+
+ <State 63>: 6.82ns
+The critical path consists of the following:
+	'dcmp' operation ('tmp_84', lenet5_ap2/source/lenet5_ap2.cpp:68) [361]  (6.82 ns)
+
+ <State 64>: 5.32ns
+The critical path consists of the following:
+	'or' operation ('tmp_83', lenet5_ap2/source/lenet5_ap2.cpp:66) [360]  (0 ns)
+	'and' operation ('tmp_85', lenet5_ap2/source/lenet5_ap2.cpp:68) [362]  (0 ns)
+	'select' operation ('storemerge1', lenet5_ap2/source/lenet5_ap2.cpp:68) [363]  (2.07 ns)
+	'store' operation (lenet5_ap2/source/lenet5_ap2.cpp:66) of variable 'storemerge1', lenet5_ap2/source/lenet5_ap2.cpp:68 on array 'conv_dot' [364]  (3.25 ns)
+
+ <State 65>: 3.79ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', lenet5_ap2/source/lenet5_ap2.cpp:76) [375]  (0 ns)
+	'sub' operation ('tmp_65', lenet5_ap2/source/lenet5_ap2.cpp:87) [384]  (3.79 ns)
+
+ <State 66>: 6.22ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', lenet5_ap2/source/lenet5_ap2.cpp:77) [390]  (0 ns)
+	'add' operation ('tmp_115', lenet5_ap2/source/lenet5_ap2.cpp:79) [398]  (3.79 ns)
+	'sub' operation ('tmp_124', lenet5_ap2/source/lenet5_ap2.cpp:79) [403]  (2.43 ns)
+
+ <State 67>: 5.68ns
+The critical path consists of the following:
+	'phi' operation ('k') with incoming values : ('k', lenet5_ap2/source/lenet5_ap2.cpp:78) [413]  (0 ns)
+	'add' operation ('tmp_148', lenet5_ap2/source/lenet5_ap2.cpp:79) [421]  (2.43 ns)
+	'getelementptr' operation ('conv_dot_addr_3', lenet5_ap2/source/lenet5_ap2.cpp:79) [423]  (0 ns)
+	'load' operation ('max_value', lenet5_ap2/source/lenet5_ap2.cpp:79) on array 'conv_dot' [424]  (3.25 ns)
+
+ <State 68>: 4.84ns
+The critical path consists of the following:
+	'load' operation ('max_value', lenet5_ap2/source/lenet5_ap2.cpp:79) on array 'conv_dot' [424]  (3.25 ns)
+	multiplexor before 'phi' operation ('l') with incoming values : ('l', lenet5_ap2/source/lenet5_ap2.cpp:80) [427]  (1.59 ns)
+
+ <State 69>: 8.57ns
+The critical path consists of the following:
+	'phi' operation ('l') with incoming values : ('l', lenet5_ap2/source/lenet5_ap2.cpp:80) [427]  (0 ns)
+	'add' operation ('tmp_62', lenet5_ap2/source/lenet5_ap2.cpp:82) [435]  (2.35 ns)
+	'add' operation ('tmp_162', lenet5_ap2/source/lenet5_ap2.cpp:82) [437]  (3.79 ns)
+	'sub' operation ('tmp_165', lenet5_ap2/source/lenet5_ap2.cpp:82) [442]  (2.43 ns)
+
+ <State 70>: 8.03ns
+The critical path consists of the following:
+	'phi' operation ('m') with incoming values : ('m', lenet5_ap2/source/lenet5_ap2.cpp:81) [445]  (0 ns)
+	'add' operation ('tmp_75', lenet5_ap2/source/lenet5_ap2.cpp:82) [453]  (2.35 ns)
+	'add' operation ('tmp_173', lenet5_ap2/source/lenet5_ap2.cpp:82) [455]  (2.43 ns)
+	'getelementptr' operation ('conv_dot_addr_5', lenet5_ap2/source/lenet5_ap2.cpp:82) [457]  (0 ns)
+	'load' operation ('max_value', lenet5_ap2/source/lenet5_ap2.cpp:82) on array 'conv_dot' [458]  (3.25 ns)
+
+ <State 71>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('max_value', lenet5_ap2/source/lenet5_ap2.cpp:82) on array 'conv_dot' [458]  (3.25 ns)
+
+ <State 72>: 6.82ns
+The critical path consists of the following:
+	'dcmp' operation ('tmp_112', lenet5_ap2/source/lenet5_ap2.cpp:82) [472]  (6.82 ns)
+
+ <State 73>: 7.77ns
+The critical path consists of the following:
+	'icmp' operation ('notrhs6', lenet5_ap2/source/lenet5_ap2.cpp:82) [466]  (3.63 ns)
+	'or' operation ('tmp_109', lenet5_ap2/source/lenet5_ap2.cpp:82) [467]  (0 ns)
+	'and' operation ('tmp_111', lenet5_ap2/source/lenet5_ap2.cpp:82) [471]  (0 ns)
+	'and' operation ('tmp_113', lenet5_ap2/source/lenet5_ap2.cpp:82) [473]  (2.07 ns)
+	'select' operation ('max_value', lenet5_ap2/source/lenet5_ap2.cpp:82) [474]  (2.07 ns)
+
+ <State 74>: 3.79ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', lenet5_ap2/source/lenet5_ap2.cpp:94) [493]  (0 ns)
+	'sub' operation ('tmp_108', lenet5_ap2/source/lenet5_ap2.cpp:97) [503]  (3.79 ns)
+
+ <State 75>: 6.15ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', lenet5_ap2/source/lenet5_ap2.cpp:95) [506]  (0 ns)
+	'add' operation ('tmp_144', lenet5_ap2/source/lenet5_ap2.cpp:97) [514]  (3.79 ns)
+	'sub' operation ('tmp_147', lenet5_ap2/source/lenet5_ap2.cpp:97) [519]  (2.35 ns)
+
+ <State 76>: 5.61ns
+The critical path consists of the following:
+	'phi' operation ('k') with incoming values : ('k', lenet5_ap2/source/lenet5_ap2.cpp:96) [525]  (0 ns)
+	'add' operation ('tmp_160', lenet5_ap2/source/lenet5_ap2.cpp:97) [533]  (2.35 ns)
+	'getelementptr' operation ('pool_dot_addr_1', lenet5_ap2/source/lenet5_ap2.cpp:97) [535]  (0 ns)
+	'load' operation ('pool_dot_load', lenet5_ap2/source/lenet5_ap2.cpp:97) on array 'pool_dot' [536]  (3.25 ns)
+
+ <State 77>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('pool_dot_load', lenet5_ap2/source/lenet5_ap2.cpp:97) on array 'pool_dot' [536]  (3.25 ns)
+	'store' operation (lenet5_ap2/source/lenet5_ap2.cpp:97) of variable 'pool_dot_load', lenet5_ap2/source/lenet5_ap2.cpp:97 on array 'fc_in' [541]  (3.25 ns)
+
+ <State 78>: 2.91ns
+The critical path consists of the following:
+	'phi' operation ('col') with incoming values : ('col', lenet5_ap2/source/lenet5_ap2.cpp:103) [550]  (0 ns)
+	'icmp' operation ('exitcond5', lenet5_ap2/source/lenet5_ap2.cpp:103) [551]  (2.91 ns)
+
+ <State 79>: 6.32ns
+The critical path consists of the following:
+	'phi' operation ('row') with incoming values : ('row', lenet5_ap2/source/lenet5_ap2.cpp:105) [566]  (0 ns)
+	'sub' operation ('tmp_157', lenet5_ap2/source/lenet5_ap2.cpp:106) [577]  (2.39 ns)
+	'add' operation ('tmp_158', lenet5_ap2/source/lenet5_ap2.cpp:106) [578]  (1.97 ns)
+	'add' operation ('tmp_159', lenet5_ap2/source/lenet5_ap2.cpp:106) [579]  (1.97 ns)
+
+ <State 80>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('fc_in_addr', lenet5_ap2/source/lenet5_ap2.cpp:106) [582]  (0 ns)
+	'load' operation ('fc_in_load', lenet5_ap2/source/lenet5_ap2.cpp:106) on array 'fc_in' [583]  (3.25 ns)
+
+ <State 81>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('fc_in_load', lenet5_ap2/source/lenet5_ap2.cpp:106) on array 'fc_in' [583]  (3.25 ns)
+
+ <State 82>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_53', lenet5_ap2/source/lenet5_ap2.cpp:106) [585]  (7.79 ns)
+
+ <State 83>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_53', lenet5_ap2/source/lenet5_ap2.cpp:106) [585]  (7.79 ns)
+
+ <State 84>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_53', lenet5_ap2/source/lenet5_ap2.cpp:106) [585]  (7.79 ns)
+
+ <State 85>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_53', lenet5_ap2/source/lenet5_ap2.cpp:106) [585]  (7.79 ns)
+
+ <State 86>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_53', lenet5_ap2/source/lenet5_ap2.cpp:106) [585]  (7.79 ns)
+
+ <State 87>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_53', lenet5_ap2/source/lenet5_ap2.cpp:106) [585]  (7.79 ns)
+
+ <State 88>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_54', lenet5_ap2/source/lenet5_ap2.cpp:106) [586]  (8.23 ns)
+
+ <State 89>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_54', lenet5_ap2/source/lenet5_ap2.cpp:106) [586]  (8.23 ns)
+
+ <State 90>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_54', lenet5_ap2/source/lenet5_ap2.cpp:106) [586]  (8.23 ns)
+
+ <State 91>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_54', lenet5_ap2/source/lenet5_ap2.cpp:106) [586]  (8.23 ns)
+
+ <State 92>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_54', lenet5_ap2/source/lenet5_ap2.cpp:106) [586]  (8.23 ns)
+
+ <State 93>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('fc_bias_load', lenet5_ap2/source/lenet5_ap2.cpp:108) on array 'fc_bias' [589]  (3.25 ns)
+
+ <State 94>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_49', lenet5_ap2/source/lenet5_ap2.cpp:108) [590]  (8.23 ns)
+
+ <State 95>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_49', lenet5_ap2/source/lenet5_ap2.cpp:108) [590]  (8.23 ns)
+
+ <State 96>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_49', lenet5_ap2/source/lenet5_ap2.cpp:108) [590]  (8.23 ns)
+
+ <State 97>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_49', lenet5_ap2/source/lenet5_ap2.cpp:108) [590]  (8.23 ns)
+
+ <State 98>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_49', lenet5_ap2/source/lenet5_ap2.cpp:108) [590]  (8.23 ns)
+
+ <State 99>: 6.82ns
+The critical path consists of the following:
+	'dcmp' operation ('tmp_98', lenet5_ap2/source/lenet5_ap2.cpp:110) [597]  (6.82 ns)
+
+ <State 100>: 8.02ns
+The critical path consists of the following:
+	'icmp' operation ('notrhs4', lenet5_ap2/source/lenet5_ap2.cpp:108) [595]  (3.63 ns)
+	'or' operation ('tmp_97', lenet5_ap2/source/lenet5_ap2.cpp:108) [596]  (0 ns)
+	'and' operation ('tmp_99', lenet5_ap2/source/lenet5_ap2.cpp:110) [598]  (0 ns)
+	'select' operation ('storemerge2', lenet5_ap2/source/lenet5_ap2.cpp:110) [599]  (2.07 ns)
+	'store' operation (lenet5_ap2/source/lenet5_ap2.cpp:108) of variable 'storemerge2', lenet5_ap2/source/lenet5_ap2.cpp:110 on array 'fc_dot' [600]  (2.32 ns)
+
+ <State 101>: 2.91ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', lenet5_ap2/source/lenet5_ap2.cpp:116) [605]  (0 ns)
+	'icmp' operation ('exitcond3', lenet5_ap2/source/lenet5_ap2.cpp:116) [606]  (2.91 ns)
+
+ <State 102>: 6.28ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', lenet5_ap2/source/lenet5_ap2.cpp:118) [621]  (0 ns)
+	'sub' operation ('tmp_170', lenet5_ap2/source/lenet5_ap2.cpp:119) [633]  (2.34 ns)
+	'add' operation ('tmp_171', lenet5_ap2/source/lenet5_ap2.cpp:119) [635]  (1.97 ns)
+	'add' operation ('tmp_172', lenet5_ap2/source/lenet5_ap2.cpp:119) [636]  (1.97 ns)
+
+ <State 103>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('fc_weight_addr_1', lenet5_ap2/source/lenet5_ap2.cpp:119) [638]  (0 ns)
+	'load' operation ('fc_weight_load_1', lenet5_ap2/source/lenet5_ap2.cpp:119) on array 'fc_weight' [641]  (3.25 ns)
+
+ <State 104>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('fc_weight_load_1', lenet5_ap2/source/lenet5_ap2.cpp:119) on array 'fc_weight' [641]  (3.25 ns)
+
+ <State 105>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_70', lenet5_ap2/source/lenet5_ap2.cpp:119) [642]  (7.79 ns)
+
+ <State 106>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_70', lenet5_ap2/source/lenet5_ap2.cpp:119) [642]  (7.79 ns)
+
+ <State 107>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_70', lenet5_ap2/source/lenet5_ap2.cpp:119) [642]  (7.79 ns)
+
+ <State 108>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_70', lenet5_ap2/source/lenet5_ap2.cpp:119) [642]  (7.79 ns)
+
+ <State 109>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_70', lenet5_ap2/source/lenet5_ap2.cpp:119) [642]  (7.79 ns)
+
+ <State 110>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_70', lenet5_ap2/source/lenet5_ap2.cpp:119) [642]  (7.79 ns)
+
+ <State 111>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_71', lenet5_ap2/source/lenet5_ap2.cpp:119) [643]  (8.23 ns)
+
+ <State 112>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_71', lenet5_ap2/source/lenet5_ap2.cpp:119) [643]  (8.23 ns)
+
+ <State 113>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_71', lenet5_ap2/source/lenet5_ap2.cpp:119) [643]  (8.23 ns)
+
+ <State 114>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_71', lenet5_ap2/source/lenet5_ap2.cpp:119) [643]  (8.23 ns)
+
+ <State 115>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_71', lenet5_ap2/source/lenet5_ap2.cpp:119) [643]  (8.23 ns)
+
+ <State 116>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('fc_bias_load_1', lenet5_ap2/source/lenet5_ap2.cpp:121) on array 'fc_bias' [646]  (3.25 ns)
+
+ <State 117>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_56', lenet5_ap2/source/lenet5_ap2.cpp:121) [647]  (8.23 ns)
+
+ <State 118>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_56', lenet5_ap2/source/lenet5_ap2.cpp:121) [647]  (8.23 ns)
+
+ <State 119>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_56', lenet5_ap2/source/lenet5_ap2.cpp:121) [647]  (8.23 ns)
+
+ <State 120>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_56', lenet5_ap2/source/lenet5_ap2.cpp:121) [647]  (8.23 ns)
+
+ <State 121>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_56', lenet5_ap2/source/lenet5_ap2.cpp:121) [647]  (8.23 ns)
+
+ <State 122>: 6.82ns
+The critical path consists of the following:
+	'dcmp' operation ('tmp_103', lenet5_ap2/source/lenet5_ap2.cpp:123) [654]  (6.82 ns)
+
+ <State 123>: 8.02ns
+The critical path consists of the following:
+	'icmp' operation ('notrhs5', lenet5_ap2/source/lenet5_ap2.cpp:121) [652]  (3.63 ns)
+	'or' operation ('tmp_102', lenet5_ap2/source/lenet5_ap2.cpp:121) [653]  (0 ns)
+	'and' operation ('tmp_104', lenet5_ap2/source/lenet5_ap2.cpp:123) [655]  (0 ns)
+	'select' operation ('storemerge3', lenet5_ap2/source/lenet5_ap2.cpp:123) [656]  (2.07 ns)
+	'store' operation (lenet5_ap2/source/lenet5_ap2.cpp:121) of variable 'storemerge3', lenet5_ap2/source/lenet5_ap2.cpp:123 on array 'fc_dot' [657]  (2.32 ns)
+
+ <State 124>: 3.1ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', lenet5_ap2/source/lenet5_ap2.cpp:129) [662]  (0 ns)
+	'icmp' operation ('exitcond1', lenet5_ap2/source/lenet5_ap2.cpp:129) [666]  (3.1 ns)
+
+ <State 125>: 6.31ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', lenet5_ap2/source/lenet5_ap2.cpp:131) [681]  (0 ns)
+	'sub' operation ('tmp_194', lenet5_ap2/source/lenet5_ap2.cpp:132) [693]  (2.34 ns)
+	'add' operation ('tmp_195', lenet5_ap2/source/lenet5_ap2.cpp:132) [695]  (1.98 ns)
+	'add' operation ('tmp_196', lenet5_ap2/source/lenet5_ap2.cpp:132) [696]  (1.98 ns)
+
+ <State 126>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('fc_weight_addr_2', lenet5_ap2/source/lenet5_ap2.cpp:132) [698]  (0 ns)
+	'load' operation ('fc_weight_load_2', lenet5_ap2/source/lenet5_ap2.cpp:132) on array 'fc_weight' [701]  (3.25 ns)
+
+ <State 127>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('fc_weight_load_2', lenet5_ap2/source/lenet5_ap2.cpp:132) on array 'fc_weight' [701]  (3.25 ns)
+
+ <State 128>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_74', lenet5_ap2/source/lenet5_ap2.cpp:132) [702]  (7.79 ns)
+
+ <State 129>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_74', lenet5_ap2/source/lenet5_ap2.cpp:132) [702]  (7.79 ns)
+
+ <State 130>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_74', lenet5_ap2/source/lenet5_ap2.cpp:132) [702]  (7.79 ns)
+
+ <State 131>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_74', lenet5_ap2/source/lenet5_ap2.cpp:132) [702]  (7.79 ns)
+
+ <State 132>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_74', lenet5_ap2/source/lenet5_ap2.cpp:132) [702]  (7.79 ns)
+
+ <State 133>: 7.79ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_74', lenet5_ap2/source/lenet5_ap2.cpp:132) [702]  (7.79 ns)
+
+ <State 134>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_81', lenet5_ap2/source/lenet5_ap2.cpp:132) [703]  (8.23 ns)
+
+ <State 135>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_81', lenet5_ap2/source/lenet5_ap2.cpp:132) [703]  (8.23 ns)
+
+ <State 136>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_81', lenet5_ap2/source/lenet5_ap2.cpp:132) [703]  (8.23 ns)
+
+ <State 137>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_81', lenet5_ap2/source/lenet5_ap2.cpp:132) [703]  (8.23 ns)
+
+ <State 138>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('tmp_81', lenet5_ap2/source/lenet5_ap2.cpp:132) [703]  (8.23 ns)
+
+ <State 139>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('fc_bias_load_2', lenet5_ap2/source/lenet5_ap2.cpp:134) on array 'fc_bias' [706]  (3.25 ns)
+
+ <State 140>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('max_value', lenet5_ap2/source/lenet5_ap2.cpp:134) [707]  (8.23 ns)
+
+ <State 141>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('max_value', lenet5_ap2/source/lenet5_ap2.cpp:134) [707]  (8.23 ns)
+
+ <State 142>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('max_value', lenet5_ap2/source/lenet5_ap2.cpp:134) [707]  (8.23 ns)
+
+ <State 143>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('max_value', lenet5_ap2/source/lenet5_ap2.cpp:134) [707]  (8.23 ns)
+
+ <State 144>: 8.23ns
+The critical path consists of the following:
+	'dadd' operation ('max_value', lenet5_ap2/source/lenet5_ap2.cpp:134) [707]  (8.23 ns)
+
+ <State 145>: 6.82ns
+The critical path consists of the following:
+	'dcmp' operation ('tmp_121', lenet5_ap2/source/lenet5_ap2.cpp:139) [724]  (6.82 ns)
+
+ <State 146>: 7.77ns
+The critical path consists of the following:
+	'icmp' operation ('notrhs8', lenet5_ap2/source/lenet5_ap2.cpp:134) [718]  (3.63 ns)
+	'or' operation ('tmp_118', lenet5_ap2/source/lenet5_ap2.cpp:134) [719]  (0 ns)
+	'and' operation ('tmp_120', lenet5_ap2/source/lenet5_ap2.cpp:134) [723]  (0 ns)
+	'and' operation ('tmp_122', lenet5_ap2/source/lenet5_ap2.cpp:139) [725]  (0 ns)
+	'and' operation ('sel_tmp2', lenet5_ap2/source/lenet5_ap2.cpp:139) [728]  (2.07 ns)
+	'select' operation ('max_index_2', lenet5_ap2/source/lenet5_ap2.cpp:139) [729]  (2.07 ns)
+
+ <State 147>: 4.39ns
+The critical path consists of the following:
+	'load' operation ('max_value', lenet5_ap2/source/lenet5_ap2.cpp:136) on array 'fc_dot' [710]  (2.32 ns)
+	'select' operation ('max_value', lenet5_ap2/source/lenet5_ap2.cpp:135) [730]  (0 ns)
+	'select' operation ('max_value', lenet5_ap2/source/lenet5_ap2.cpp:139) [731]  (2.07 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+	State 101
+	State 102
+	State 103
+	State 104
+	State 105
+	State 106
+	State 107
+	State 108
+	State 109
+	State 110
+	State 111
+	State 112
+	State 113
+	State 114
+	State 115
+	State 116
+	State 117
+	State 118
+	State 119
+	State 120
+	State 121
+	State 122
+	State 123
+	State 124
+	State 125
+	State 126
+	State 127
+	State 128
+	State 129
+	State 130
+	State 131
+	State 132
+	State 133
+	State 134
+	State 135
+	State 136
+	State 137
+	State 138
+	State 139
+	State 140
+	State 141
+	State 142
+	State 143
+	State 144
+	State 145
+	State 146
+	State 147
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
