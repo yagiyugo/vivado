@@ -5,11 +5,11 @@
 ############################################################
 open_project lenet5_ap2_shift
 set_top lenet5_ap2
-add_files lenet5_ap2_shift/source/define.h
-add_files lenet5_ap2_shift/source/extern.h
-add_files lenet5_ap2_shift/source/func.cpp
-add_files lenet5_ap2_shift/source/init.cpp
 add_files lenet5_ap2_shift/source/lenet5_ap2.cpp
+add_files lenet5_ap2_shift/source/init.cpp
+add_files lenet5_ap2_shift/source/func.cpp
+add_files lenet5_ap2_shift/source/extern.h
+add_files lenet5_ap2_shift/source/define.h
 add_files -tb lenet5_ap2_shift/source/lenet5_ap2_tb.cpp
 open_solution "solution1"
 set_part {xc7z020clg484-1} -tool vivado
