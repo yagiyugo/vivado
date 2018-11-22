@@ -7,12 +7,16 @@
 FILE *fp;
 
 char fname[256];
-char data_dir[] = "/home/yagiyugo/vivado/lenet5_ap2_shift/mnist_test_data/";
-char param_dir[] = "/home/yagiyugo/vivado/lenet5_ap2_shift/param_txt/";
+char data_dir[] = "/home/yagiyugo/vivado/lenet5_ap2_shift_bin/mnist_test_data/";
+char param_dir[] = "/home/yagiyugo/vivado/lenet5_ap2_shift_bin/param_txt/";
 char fix[16];
+unsigned char c_in;
+int shift_amount;
 
 double f_in;
 int i_in0, i_in1;
+
+void bin_to_int(unsigned char in, int out[]);
 
 void load_test_data(){
 	for(int i=1; i<=5; i++){
@@ -29,7 +33,7 @@ void load_test_data(){
 					}
 					else{
 						fscanf(fp,"%lf", &f_in);
-						in[k][l][(i-1)*2000+j]=ap_fixed<30,2>(f_in);
+						in[k][l][(i-1)*2000+j]=ap_fixed<32,10>(f_in);
 					}
 				}
 			}
@@ -49,24 +53,24 @@ void load_test_data(){
 }
 
 void load_fc_weight(int num, int row, int column){
-	sprintf(fname, "%s%s%s%d%s", param_dir, fix, "fc", num, "_weight.txt");
-	if ((fp = fopen(fname, "r")) == NULL) {
+	sprintf(fname, "%s%s%s%d%s", param_dir, fix, "fc", num, "_weight.bin");
+	if ((fp = fopen(fname, "rb")) == NULL) {
 		fprintf(stderr, "%s is not open.\n", fname);
 	    _exit(1);
 	}
 	for(int i=0; i<row; i++){
 		for(int j=0; j<column; j++){
-			fscanf(fp, "%d %d", &i_in0, &i_in1);
-			fc_weight[num][i][j][0]=i_in0;
-			fc_weight[num][i][j][1]=i_in1;
+			fread(&c_in, sizeof(char), 1, fp);
+			bin_to_int(c_in, fc_weight[num][i][j]);
 		}
 	}
 	fclose(fp);
 }
 
+
 void load_conv_weight(int lay_num, int channel, int sample, int row, int column){
-	sprintf(fname, "%s%s%s%d%s", param_dir, fix, "conv", lay_num, "_weight.txt");
-	if ((fp = fopen(fname, "r")) == NULL) {
+	sprintf(fname, "%s%s%s%d%s", param_dir, fix, "conv", lay_num, "_weight.bin");
+	if ((fp = fopen(fname, "rb")) == NULL) {
 		fprintf(stderr, "%s is not open.\n", fname);
 	    _exit(1);
 	}
@@ -74,9 +78,8 @@ void load_conv_weight(int lay_num, int channel, int sample, int row, int column)
 		for(int j=0; j<sample; j++){
 			for(int k=0; k<row; k++){
 				for(int l=0; l<column; l++){
-					fscanf(fp, "%d %d", &i_in0, &i_in1);
-					conv_weight[lay_num][i][j][k][l][0]=i_in0;
-					conv_weight[lay_num][i][j][k][l][1]=i_in1;
+					fread(&c_in, sizeof(char), 1, fp);
+					bin_to_int(c_in, conv_weight[lay_num][i][j][k][l]);
 				}
 			}
 		}
@@ -92,7 +95,7 @@ void load_fc_bias(int lay_num, int row){
 	}
 	for(int i=0; i<row; i++){
 		fscanf(fp, "%lf", &f_in);
-		fc_bias[lay_num][i]=(ap_fixed<30,10>)(f_in);
+		fc_bias[lay_num][i]=(ap_fixed<32,10>)(f_in);
 	}
 	fclose(fp);
 }
@@ -105,7 +108,7 @@ void load_conv_bias(int lay_num, int row){
 	}
 	for(int i=0; i<row; i++){
 		fscanf(fp, "%lf", &f_in);
-		conv_bias[lay_num][i]=(ap_fixed<30,10>)(f_in);
+		conv_bias[lay_num][i]=(ap_fixed<32,10>)(f_in);
 	}
 	fclose(fp);
 }

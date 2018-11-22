@@ -7,17 +7,21 @@
 #include <time.h>
 #include "define.h"
 
-ap_fixed<30,10> in[32][32][10000];
+ap_fixed<32,10> in[32][32][10000];
 int tag[10000];
 int result;
 int fc_weight[4][400][400][2];  //[層][縦][横][データの種類]
-ap_fixed<30,10> fc_bias[4][120];
+ap_fixed<32,10> fc_bias[4][120];
 int conv_weight[3][16][6][5][5][2];  //[層][チャネル][サンプル][縦][横][データの種類]
-ap_fixed<30,10> conv_bias[3][16];
-ap_fixed<30,10> fc_dot[3][120];
-ap_fixed<30,10> conv_dot[3][16][28][28]; //[層][チャネル][サンプル][縦][横]
-ap_fixed<30,10> pool_dot[3][16][14][14]; //[層][チャネル][サンプル][縦][横]
-ap_fixed<30,10> fc_in[400];
+ap_fixed<32,10> conv_bias[3][16];
+ap_fixed<32,10> fc_dot[3][120];
+ap_fixed<32,10> conv_dot[3][16][28][28]; //[層][チャネル][サンプル][縦][横]
+ap_fixed<32,10> pool_dot[3][16][14][14]; //[層][チャネル][サンプル][縦][横]
+ap_fixed<32,10> fc_in[400];
+
+char char_init_time[] = "init_time";
+char char_nn_time[] = "nn_time";
+char char_all_time[] = "all_time";
 
 
 int lenet5_ap2(int index);
@@ -69,9 +73,9 @@ int main(){
     printf("all_start = %f, all_end = %f\n", (double)all_start.tv_sec, (double)all_end.tv_sec);
     */
     //printf("init_time = %f\nnn_time = %f\nall_time=%f\n", (double)(init_end.tv_sec-init_start.tv_sec), (double)(nn_end.tv_sec-nn_start.tv_sec), (double)(all_end.tv_sec-all_start.tv_sec));
-    print_time("init_time", init_start, init_end);
-    print_time("nn_time  ", nn_start, nn_end);
-    print_time("all_time ", all_start, all_end);
+    print_time(char_init_time, init_start, init_end);
+    print_time(char_nn_time, nn_start, nn_end);
+    print_time(char_all_time, all_start, all_end);
 
 
 

@@ -19,7 +19,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../source/lenet5_ap2_tb.cpp ../../../source/lenet5_ap2.cpp ../../../source/init.cpp ../../../source/func.cpp
+HLS_SOURCES = ../../../source/lenet5_ap2_tb.cpp ../../../source/func.cpp ../../../source/init.cpp ../../../source/lenet5_ap2.cpp
 
 TARGET := csim.exe
 
@@ -75,11 +75,11 @@ $(ObjDir)/lenet5_ap2_tb.o: ../../../source/lenet5_ap2_tb.cpp $(ObjDir)/.dir
 
 -include $(ObjDir)/lenet5_ap2_tb.d
 
-$(ObjDir)/lenet5_ap2.o: ../../../source/lenet5_ap2.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../source/lenet5_ap2.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/func.o: ../../../source/func.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../source/func.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
 
--include $(ObjDir)/lenet5_ap2.d
+-include $(ObjDir)/func.d
 
 $(ObjDir)/init.o: ../../../source/init.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../source/init.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
@@ -87,8 +87,8 @@ $(ObjDir)/init.o: ../../../source/init.cpp $(ObjDir)/.dir
 
 -include $(ObjDir)/init.d
 
-$(ObjDir)/func.o: ../../../source/func.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../source/func.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/lenet5_ap2.o: ../../../source/lenet5_ap2.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../source/lenet5_ap2.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
 
--include $(ObjDir)/func.d
+-include $(ObjDir)/lenet5_ap2.d

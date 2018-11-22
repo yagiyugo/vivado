@@ -4,11 +4,17 @@
 ## Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project lenet5_ap2_shift_bin
+add_files lenet5_ap2_shift_bin/source/define.h
+add_files lenet5_ap2_shift_bin/source/extern.h
+add_files lenet5_ap2_shift_bin/source/func.cpp
+add_files lenet5_ap2_shift_bin/source/init.cpp
+add_files lenet5_ap2_shift_bin/source/lenet5_ap2.cpp
+add_files -tb lenet5_ap2_shift_bin/source/lenet5_ap2_tb.cpp
 open_solution "solution1"
 set_part {xc7z020clg484-1} -tool vivado
 create_clock -period 10 -name default
 #source "./lenet5_ap2_shift_bin/solution1/directives.tcl"
-#csim_design
+csim_design -clean -O -compiler gcc
 csynth_design
-#cosim_design
+cosim_design
 export_design -format ip_catalog
