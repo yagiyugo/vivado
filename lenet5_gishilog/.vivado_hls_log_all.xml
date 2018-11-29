@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T16:39:02.394+0900"/>
+        <logs message="@E Simulation failed." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T16:39:02.391+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T16:28:46.155+0900"/>
+        <logs message="@E Simulation failed." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T16:28:46.152+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T16:15:47.119+0900"/>
+        <logs message="@E Simulation failed." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T16:15:47.115+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T15:30:43.279+0900"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T15:30:43.276+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T15:25:39.513+0900"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T15:25:39.508+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T15:22:31.666+0900"/>
+        <logs message="@E Simulation failed." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T15:22:31.663+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T15:20:54.852+0900"/>
+        <logs message="@E Simulation failed." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T15:20:54.849+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T15:08:22.887+0900"/>
+        <logs message="@E Simulation failed." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T15:08:22.882+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T15:05:21.357+0900"/>
+        <logs message="@E Simulation failed." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T15:05:21.354+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T14:52:19.588+0900"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T14:52:19.584+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T14:49:30.502+0900"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T14:49:30.498+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T14:45:00.134+0900"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T14:45:00.130+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T14:40:05.437+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T14:33:19.665+0900"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T14:29:17.925+0900"/>
+        <logs message="@E Simulation failed." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T14:29:17.921+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T14:07:52.316+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T14:03:08.770+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T14:01:26.246+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_gishilog" solutionName="solution1" date="2018-11-29T13:59:20.737+0900"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

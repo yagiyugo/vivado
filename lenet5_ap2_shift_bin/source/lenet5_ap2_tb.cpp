@@ -10,9 +10,9 @@
 ap_fixed<32,10> in[32][32][10000];
 int tag[10000];
 int result;
-int fc_weight[4][400][400][2];  //[層][縦][横][データの種類]
+char fc_weight[4][400][400][2];  //[層][縦][横][データの種類]
 ap_fixed<32,10> fc_bias[4][120];
-int conv_weight[3][16][6][5][5][2];  //[層][チャネル][サンプル][縦][横][データの種類]
+char conv_weight[3][16][6][5][5][2];  //[層][チャネル][サンプル][縦][横][データの種類]
 ap_fixed<32,10> conv_bias[3][16];
 ap_fixed<32,10> fc_dot[3][120];
 ap_fixed<32,10> conv_dot[3][16][28][28]; //[層][チャネル][サンプル][縦][横]
@@ -76,8 +76,6 @@ int main(){
     print_time(char_init_time, init_start, init_end);
     print_time(char_nn_time, nn_start, nn_end);
     print_time(char_all_time, all_start, all_end);
-
-
 
     return 0;
 }

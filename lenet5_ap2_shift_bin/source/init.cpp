@@ -16,7 +16,7 @@ int shift_amount;
 double f_in;
 int i_in0, i_in1;
 
-void bin_to_int(unsigned char in, int out[]);
+void bin_to_int(unsigned char in, char out[]);
 
 void load_test_data(){
 	for(int i=1; i<=5; i++){
@@ -62,6 +62,7 @@ void load_fc_weight(int num, int row, int column){
 		for(int j=0; j<column; j++){
 			fread(&c_in, sizeof(char), 1, fp);
 			bin_to_int(c_in, fc_weight[num][i][j]);
+			//fc_weight[num][i][j] = c_in;
 		}
 	}
 	fclose(fp);
@@ -80,6 +81,7 @@ void load_conv_weight(int lay_num, int channel, int sample, int row, int column)
 				for(int l=0; l<column; l++){
 					fread(&c_in, sizeof(char), 1, fp);
 					bin_to_int(c_in, conv_weight[lay_num][i][j][k][l]);
+					//conv_weight[lay_num][i][j][k][l] = c_in;
 				}
 			}
 		}

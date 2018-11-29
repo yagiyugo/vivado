@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="define.h" path="/home/yagiyugo/vivado/lenet5_gishilog/source/define.h"/>
+    <originFiles name="extern.h" path="/home/yagiyugo/vivado/lenet5_gishilog/source/extern.h"/>
+    <originFiles name="func.cpp" path="/home/yagiyugo/vivado/lenet5_gishilog/source/func.cpp"/>
+    <originFiles name="init.cpp" path="/home/yagiyugo/vivado/lenet5_gishilog/source/init.cpp"/>
+    <originFiles name="lenet5_ap2.cpp" path="/home/yagiyugo/vivado/lenet5_gishilog/source/lenet5_ap2.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="lenet5_ap2_tb.cpp" path="/home/yagiyugo/vivado/lenet5_gishilog/source/lenet5_ap2_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

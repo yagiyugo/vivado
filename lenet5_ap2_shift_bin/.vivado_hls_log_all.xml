@@ -2,23 +2,26 @@
 <vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
   <errorLogs>
     <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
       <csimLog>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_ap2_shift_bin" solutionName="solution1" date="2018-11-22T14:07:23.943+0900"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_ap2_shift_bin" solutionName="solution1" date="2018-11-22T14:06:21.253+0900"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_ap2_shift_bin" solutionName="solution1" date="2018-11-22T13:59:24.813+0900"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_ap2_shift_bin" solutionName="solution1" date="2018-11-22T13:25:59.514+0900"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_ap2_shift_bin" solutionName="solution1" date="2018-11-22T13:24:42.991+0900"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_ap2_shift_bin" solutionName="solution1" date="2018-11-22T13:13:56.141+0900"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_ap2_shift_bin" solutionName="solution1" date="2018-11-22T12:20:57.322+0900"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_ap2_shift_bin" solutionName="solution1" date="2018-11-21T18:39:19.057+0900"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_ap2_shift_bin" solutionName="solution1" date="2018-11-21T18:34:20.707+0900"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_ap2_shift_bin" solutionName="solution1" date="2018-11-21T18:28:41.826+0900"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_ap2_shift_bin" solutionName="solution1" date="2018-11-21T17:27:47.952+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_ap2_shift_bin" solutionName="solution1" date="2018-11-22T18:52:25.871+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_ap2_shift_bin" solutionName="solution1" date="2018-11-22T18:45:55.161+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_ap2_shift_bin" solutionName="solution1" date="2018-11-22T17:41:44.088+0900"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lenet5_ap2_shift_bin" solutionName="solution1" date="2018-11-22T17:40:27.442+0900"/>
       </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
+      <synLog>
+        <logs message="WARNING: [SYNCHK 200-62] lenet5_ap2_shift_bin/source/lenet5_ap2.cpp:281: warning: out of bound array access on variable 'fc_dot.V'." projectName="lenet5_ap2_shift_bin" solutionName="solution1" date="2018-11-22T17:32:18.398+0900" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
       <csimLog/>
     </logs>
   </warningLogs>

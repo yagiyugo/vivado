@@ -22,18 +22,18 @@ void print_time(char *name, struct timespec start_time, struct timespec end_time
 	}
 }
 
-void bin_to_int(unsigned char in, int out[]){
+void bin_to_int(unsigned char in, char out[]){
 	if((in & 0b10000000) == (1<<7)){
+		out[0] = -1;
+	}
+	else{
 		out[0] = 1;
 	}
-	else{
-		out[0] = 0;
-	}
 	if((in & 0b01000000) == (1<<6)){
-		out[1] = -(in & 0b00111111);
+		out[1] = -1*(in & 0b00111111);
 	}
 	else{
-		out[1] = in & 0b00111111;
+		out[1] = (in & 0b00111111);
 	}
 }
 
@@ -44,7 +44,25 @@ unsigned char extract_sign(unsigned char in){
 		return 1;
 }
 
-char extract_shift_amount(unsigned char in){
+char extract_signs(unsigned char in){
+	if((in & 0b10000000) == (1<<7))
+		return -1;
+	else
+		return 1;
+}
+
+unsigned char extract_direction(unsigned char in){
+	if((in & 0b01000000) == (1<<6))
+		return -1;
+	else
+		return 1;
+}
+
+unsigned char extract_shift_amount(unsigned char in){
+	return in & 0b00111111;
+}
+
+char extract_shift_amounts(unsigned char in){
 	if((in & 0b01000000) == (1<<6))
 		return -(in & 0b00111111);
 	else

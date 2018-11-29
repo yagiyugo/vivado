@@ -1,0 +1,7 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../source/lenet5_ap2_tb.cpp in release mode
+   Compiling ../../../source/func.cpp in release mode
+   Compiling ../../../source/init.cpp in release mode
+   Compiling ../../../source/lenet5_ap2.cpp in release mode
+   Generating csim.exe

@@ -4,6 +4,7 @@
 ## Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project lenet5_ap2_shift_bin
+set_top lenet5_ap2
 add_files lenet5_ap2_shift_bin/source/define.h
 add_files lenet5_ap2_shift_bin/source/extern.h
 add_files lenet5_ap2_shift_bin/source/func.cpp
